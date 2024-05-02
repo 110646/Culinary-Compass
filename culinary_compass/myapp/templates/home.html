@@ -1,6 +1,5 @@
 {% load static %}
 
-<!--{% static 'myapp/assets/fonts/https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700' %}-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="{% static 'myapp/assets/fonts/https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700' %}" rel="stylesheet">
+    <link href="fonts/https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
     <title>Culinary Compass</title>
 
@@ -19,9 +18,9 @@
     <link href="{% static 'myapp/assets/bootstrap/cssvendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{% static 'myapp/assets/fonts/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/assets/css/templatemo-host-cloud.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/assets/css/owl.css' %}">
 <!--
 
 Host Cloud Template
