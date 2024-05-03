@@ -1,14 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Culinary Compass</title>
-        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     </head>
     <body>
-        <div class="wrapper">
-            <h1>Front Page</h1>
-            <img src="static/images/Header.jpg">
+        <div class="container">
+
         </div>
     </body>
+
+    <style>
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 10px 8%;
+            background-image: url('{% static 'images/Header.jpg' %}');
+        }
+    </style>
 </html>
