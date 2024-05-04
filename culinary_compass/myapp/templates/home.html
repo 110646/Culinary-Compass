@@ -5,6 +5,7 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Culinary Compass</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +14,11 @@
     <body>
         <div class="container">
             <nav>
-                <img src="{% static 'images/Logo.png' %}" class="logo">
+                <input type="checkbox" id="check" class="checkbox">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo">
                 <ul>
                     <li><a href="#">Our Top Picks</a></li>
                     <li><a href="#">Kitchen Tips</a></li>
@@ -21,7 +26,7 @@
                 </ul>
             </nav>
             <div class="content">
-                <h1>Discover Deliciousness: Your One-Stop <br> Destination for Recipes, Nutrion, and Kitchen Tips!</h1>
+                <h1>Discover Deliciousness: Your One-Stop <br> Destination for Recipes, Nutrition, and Kitchen Tips!</h1>
                 <p1>Welcome to our culinary haven, where you can explore a vast array of recipes and uncover their nutritional values. Whether you're a seasoned chef or a kitchen newbie, our user-friendly platform makes it effortless to search, discover, and indulge in the world of flavors. From hearty entrees to delectable desserts, we've got you covered with comprehensive recipe guides, detailed nutritional information, and tips to elevate your cooking experience. </p1>
                 <form>
                     <input type="text" placeholder="Find Your Recipe">
@@ -47,7 +52,7 @@
             background-repeat: no-repeat;
             background-position: center;
             padding: 10px 8%;
-            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static 'images/Header.jpg' %}');
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/Header.jpg" %}');
         }
         nav {
             width: 100%;
@@ -57,13 +62,21 @@
             padding: 10px 0;
 
         }
+        .checkbox {
+            display: none;
+        }
+        .checkbtn {
+            display: none;
+        }
         .logo {
             width: 325px;
             cursor: pointer;
-            position: absolute;
-            top: 10px;
-            left: 148px;
+            float: left;
+            -webkit-filter: drop-shadow(0px 0.5px 0.5px #a14b00);
+            filter: drop-shadow(0px 0.5px 0.5px #a14b00);
         }
+
+
 
         nav ul {
             list-style: none;
@@ -129,7 +142,7 @@
             padding: 10px 30px;
             text-decoration: none;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
             -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
             -webkit-transition-property: box-shadow, transform;
@@ -140,6 +153,109 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             -webkit-transform: scale(1.05);
             transform: scale(1.05);
+        }
+        
+        @media only screen and (max-width: 1172px) {
+            .container {
+                width: 100%;
+                min-height: 100vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 10px 8%;
+                background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/Header.jpg" %}');
+            }
+            nav {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 0;
+
+            }
+            .logo {
+                width: 275px;
+                cursor: pointer;
+                float: left;
+            }
+            
+        }
+        @media only screen and (max-width: 917px) {
+            .container {
+                width: 100%;
+                min-height: 100vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 10px 8%;
+                background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/Header.jpg" %}');
+            }
+            .checkbtn {
+                display: block;
+                font-size: 30px;
+                color: #fff;
+                position: absolute;
+                top: 10px;
+                right: 0px;
+                line-height: 80px;
+                margin-right: 40px;
+                cursor: pointer;
+            }
+            .checkbox {
+                display: block;
+                float: right;
+            }   
+            #check {
+                display: none;
+            }
+            ul {
+                position: fixed;
+                width: 30%;
+                height: 35vh;
+                background-color: #ff7800;
+                top: 100px;
+                right: -100%;
+                transition: all .5s;
+                text-align: center;
+
+
+            }
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+                text-align: right;
+
+            }
+            nav ul li a {
+                font-size: 18px;
+                font-weight: 500;
+            }
+            a:hover, a.active{
+                background: none;
+                color: #883f00;
+
+            }
+            #check:checked ~ ul{
+                right: 0;
+                width: 25%;
+                text-align: center;
+        
+            }
+
+
+        }
+
+        @media only screen and (max-width: 420px) {
+            .container {
+                width: 100%;
+                min-height: 100vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 10px 8%;
+                background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/Header.jpg" %}');
+            }
         }
 
     </style>
