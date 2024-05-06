@@ -9,8 +9,8 @@ def home(request):
 def result(request):
     return render(request, 'result.html', {})
 
-def recipe(request):
-    return render(request, 'recipe.html', {})
+def details(request):
+    return render(request, 'detailed.html', {})
 
 def about(request):
     return render(request, 'about.html', {})
