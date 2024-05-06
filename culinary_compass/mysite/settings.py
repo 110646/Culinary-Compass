@@ -122,7 +122,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 
-API_KEY = 'XXX'
+API_KEY = '666b9928037f4ef997006f3a36eccc4a'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
