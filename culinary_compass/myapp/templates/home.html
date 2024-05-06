@@ -33,7 +33,7 @@
                 <p1>Welcome to our culinary haven, where you can explore a vast array of recipes and uncover their nutritional values. Whether you're a seasoned chef or a kitchen newbie, our user-friendly platform makes it effortless to search, discover, and indulge in the world of flavors. From hearty entrees to delectable desserts, we've got you covered with comprehensive recipe guides, detailed nutritional information, and tips to elevate your cooking experience. </p1>
                 <form id="apiform" method="POST" action="/">
                     {% csrf_token %}
-                    <input type="search" name="query" id="query" placeholder="Find Your Recipe">
+                    <input type="query" name="query" id="query" placeholder="Find Your Recipe">
                     <button type="submit" class="btn">Search</button>
                 </form>
             </div>
