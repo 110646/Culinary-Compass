@@ -49,3 +49,9 @@ def details(request):
 
 def about(request):
     return render(request, 'about.html', {})
+
+def top(request):
+	return render(request, 'top.html', {})
+
+def tip(request):
+	return render(request, 'tip.html', {})

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Culinary Compass</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <input type="checkbox" id="check" class="checkbox">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo">
+                <ul>
+                    <label for="check" class="checkbtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <li><a class="top" href="top.html">Our Top Picks</a></li>
+                    <li><a class="tips" href="tip.html">Kitchen Tips</a></li>
+                    <li><a class="about" href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <h1>About Us:</h1>
+                <p1>Hi, we are Computer Science major students at Georgia State University who are motivated <br>to understand the fundamentals of backend developmental of apps/websites. </p1>
+                <form id="apiform" method="POST" action="/">
+                    {% csrf_token %}
+                    <input type="query" name="query" id="query" placeholder="Find Your Recipe">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+<!--This will be the makshift css file for the background image rendering for the project-->
+    <style>
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 10px 8%;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/About.jpg" %}');
+        }
+    </style>
+</html>
