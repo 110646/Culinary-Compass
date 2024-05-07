@@ -14,7 +14,7 @@
     <body>
         <div class="page">
             <nav>
-                <img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo">
+                <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
                 <ul>
                     <label for="check" class="checkbtn">
                         <i class="fa-solid fa-bars"></i>
@@ -29,7 +29,6 @@
                 <table>
                     <thead>
                       <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>Image</th>
                       </tr>
@@ -37,7 +36,6 @@
                     <tbody>
                     {% for item in results %}
                       <tr>
-                        <td>{{item.id}}</td>
                         {% if item.name %}
                             <td>{{item.name}}</td>
                         {% else %}
@@ -74,7 +72,7 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 10px 8%;
-        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/results.png" %}');
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/results.jpg" %}');
     }
     nav {
         width: 100%;
