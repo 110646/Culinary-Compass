@@ -1,5 +1,47 @@
-{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Add any other CSS or stylesheets here -->
+</head>
+<body>
+    <nav>
+        <!-- Your navigation bar code here -->
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'myapp:results' %}">Back to Results</a></li>
+            <!-- Add more navigation links if needed -->
+        </ul>
+    </nav>
 
-{% block content %}
-    <p>Here is your step-by-step recipe</p>
-{% endblock content %}
+    <div class="container">
+        <div class="content">
+            <h1>{{ recipe.title }}</h1>
+            <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+            <p>Servings: {{ recipe.servings }}</p>
+            <p>Ready in Minutes: {{ recipe.readyInMinutes }}</p>
+            <!-- Display other recipe details as needed -->
+            <h2>Ingredients</h2>
+            <ul>
+                {% for ingredient in recipe.extendedIngredients %}
+                    <li>{{ ingredient.original }}</li>
+                {% endfor %}
+            </ul>
+            <h2>Instructions</h2>
+            <ol>
+                {% for step in recipe.analyzedInstructions %}
+                    {% for instruction in step.steps %}
+                        <li>{{ instruction.step }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ol>
+            <!-- Add more details here -->
+        </div>
+    </div>
+
+    <!-- Add any JavaScript or scripts here -->
+</body>
+</html>

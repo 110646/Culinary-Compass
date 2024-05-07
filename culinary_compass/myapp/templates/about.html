@@ -46,7 +46,9 @@
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
                 </div>  
-                <a Href="" class="btn">Learn More</a> 
+                <a class="text" href="">
+                    <button class="btn">Learn More</button>
+                </a> 
             </div>
             <div class="flex">
                 <img src="{% static 'images/us.png' %}">
@@ -64,6 +66,9 @@
             background-position: center;
             padding: 10px 8%;
             background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('{% static "images/About.jpg" %}');
+        }
+        .text {
+            text-decoration: none;
         }
     </style>
 </html>
