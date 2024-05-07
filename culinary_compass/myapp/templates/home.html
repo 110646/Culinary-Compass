@@ -1,45 +1,43 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Culinary Compass</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    </head>
-    <body>
-        <div class="container">
-            <nav>
-                <input type="checkbox" id="check" class="checkbox">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Compass</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="check" class="checkbox">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
+            <ul>
                 <label for="check" class="checkbtn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
-                <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
-                <ul>
-                    <label for="check" class="checkbtn">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
-                    <li><a class="top" href="top">Our Top Picks</a></li>
-                    <li><a class="tips" href="tip">Kitchen Tips</a></li>
-                    <li><a class="about" href="about">About Us</a></li>
-                </ul>
-            </nav>
-            <div class="content">
-                <h1>Discover Deliciousness: Your One-Stop <br> Destination for Recipes, Nutrition, and Kitchen Tips!</h1>
-                <p1>Welcome to our culinary haven, where you can explore a vast array of recipes and uncover their nutritional values. Whether you're a seasoned chef or a kitchen newbie, our user-friendly platform makes it effortless to search, discover, and indulge in the world of flavors. From hearty entrees to delectable desserts, we've got you covered with comprehensive recipe guides, detailed nutritional information, and tips to elevate your cooking experience. </p1>
-                <form id="apiform" method="POST" action="/">
-                    {% csrf_token %}
-                    <input type="query" name="query" id="query" placeholder="Find Your Recipe">
-                    <button type="submit" class="btn">Search</button>
-                </form>
-            </div>
+                <li><a class="top" href="top">Our Top Picks</a></li>
+                <li><a class="tips" href="tip">Kitchen Tips</a></li>
+                <li><a class="about" href="about">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Discover Deliciousness: Your One-Stop <br> Destination for Recipes, Nutrition, and Kitchen Tips!</h1>
+            <p>Welcome to our culinary haven, where you can explore a vast array of recipes and uncover their nutritional values. Whether you're a seasoned chef or a kitchen newbie, our user-friendly platform makes it effortless to search, discover, and indulge in the world of flavors. From hearty entrees to delectable desserts, we've got you covered with comprehensive recipe guides, detailed nutritional information, and tips to elevate your cooking experience.</p>
+            <form id="search-form" method="GET" action="{% url 'myapp:results' %}">
+                <input type="text" name="query" id="query" placeholder="Find Your Recipe">
+                <button type="submit" class="btn">Search</button>
+            </form>
         </div>
-    </body>
-
+    </div>
+</body>
+</html>
 <!--This will be the makshift css file for the background image rendering for the project-->
     <style>
         .container {
