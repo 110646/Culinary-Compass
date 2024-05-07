@@ -22,9 +22,9 @@
                 <label for="check" class="checkbtn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
-                <li><a class="top" href="top">Our Top Picks</a></li>
-                <li><a class="tips" href="tip">Kitchen Tips</a></li>
-                <li><a class="about" href="about">About Us</a></li>
+                <li><a class="top" href="{% url 'myapp:top' %}">Our Top Picks</a></li>
+                <li><a class="tips" href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
+                <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
             </ul>
         </nav>
         <div class="content">
