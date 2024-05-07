@@ -41,7 +41,7 @@ class APIMixin:
 			"recipes": "recipes/complexSearch?",
 		}
         
-		url = f"https://api.spoonacular.com/{url_dict['recipes']}query={self.query}&apiKey={settings.API_KEY}"
+		url = f"https://api.spoonacular.com/{url_dict['recipes']}query={self.query}&addRecipeInformation=True&apiKey={settings.API_KEY}"
 
 		r = requests.get(url)
 		if r.status_code == 200:

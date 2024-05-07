@@ -33,13 +33,11 @@ def results(request):
 
 	if query:
 		results = APIMixin( query=query).get_data()
-
 		if results:
 			context = {
 				"results": results,
 				"query": query,
 			}
-
 			return render(request, 'results.html', context)
 	
 	return redirect(reverse('myapp:home'))

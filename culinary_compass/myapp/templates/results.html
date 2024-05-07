@@ -41,11 +41,7 @@
                         {% else %}
                             <td>{{item.title}}</td>
                         {% endif %}
-                        {% if cat == "ingredients" %}
-                        <td>No image available</td>
-                        {% else %}
                         <td><img src="{{item.image}}" style="width:auto; height: 125px"></td> 
-                        {% endif %}
                       </tr>
                     {% endfor %}
                       
