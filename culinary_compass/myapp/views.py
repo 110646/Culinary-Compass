@@ -22,8 +22,6 @@ def results(request):
     else:
         return render(request, 'results.html', {'results': [], 'query': query})
     
-
-
 def details(request):
     recipe_id = request.GET.get('recipe_id', '')
     query = request.GET.get('query', '')  
