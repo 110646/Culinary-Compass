@@ -73,33 +73,7 @@ nav ul li a {
     font-size: 16px;
     padding-left: 10px;
 }
-.flex{
-    flex:0 0 50%;
-    max-width:50%;
-    padding:0 20px;
-}
-.btn{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    background: #ff7800;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 10px 30px;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
 
-}
 .btn:hover, .btn:focus, .btn:active{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.05);

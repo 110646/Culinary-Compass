@@ -23,9 +23,9 @@
                     <label for="check" class="checkbtn">
                         <i class="fa-solid fa-bars"></i>
                     </label>
-                    <li><a class="top" href="top">Our Top Picks</a></li>
-                    <li><a class="tips" href="tip">Kitchen Tips</a></li>
-                    <li><a class="about" href="about">About Us</a></li>
+                    <li><a class="top" href="{% url 'myapp:top' %}">Our Top Picks</a></li>
+                    <li><a class="tips" href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
+                    <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
                 </ul>
             </nav>
             <div class="content">
@@ -40,13 +40,13 @@
                      can find recipes, nutritional information, and cooking insights at their fingertips. Beyond our academic pursuits,
                       we're united by a common goal: to make a meaningful impact through technology. Whether it's through developing 
                       innovative solutions or fostering a vibrant online community, we're committed to leveraging our skills to enrich the digital landscape. </p1>
-                <div class="Social Media Links">
+                <div class="Social">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-twitter"></i></a>    
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
                 </div>  
-                <a href="google.com" class="btn">Learn More</a> 
+                <a Href="" class="btn">Learn More</a> 
             </div>
             <div class="flex">
                 <img src="{% static 'images/us.png' %}">
@@ -64,6 +64,12 @@
             background-position: center;
             padding: 10px 8%;
             background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('{% static "images/About.jpg" %}');
+        }
+        .text {
+            text-decoration: none;
+        }
+        .Social {
+            color: #ff7800;
         }
     </style>
 </html>
