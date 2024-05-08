@@ -42,36 +42,58 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-
-.content {
+.container{
+    padding:80px opx;
+}
+.about-us{
+    max-width: 2100px;
+    margin:0 auto;
+    padding:0 20px;
     margin-top: 14%;
     color: #fff;
-    max-width: 1400px;
 }
-.content h1 {
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 40px;
-
+.row{
+    display:flex;
+    flex-wrap: wrap;
 }
-.content p1{
-    font-size: 18px;
+.about-us h1{
+    font-size: 60px;
+    margin-bottom: 20px;
 }
-.content form{
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 30px;
-
+.about-us p1{
+    font-size: 17px;
+    margin-bottom: 8px;
+    line-height: 2;
 }
-.content form input{
-    border: 0;
-    outline: 0;
-    width: 100%;
-    font-size: 16px;
-    padding-left: 10px;
+.about-us img{
+    display:block;
+    max-width: 100%;
+    height: auto;
+    margin:0 auto;
+}
+.flex{
+    flex:0 0 50%;
+    max-width:50%;
+    padding:0 20px;
+}
+.Social{
+    margin-bottom: 20px;
+}
+.Social a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    color:#000000;
+    background-color:#ff7800;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+}
+.Social a:hover{
+    transform: translateY(-3px);
 }
 .btn{
     display: flex;
@@ -100,7 +122,6 @@ nav ul li a {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
-
 @media only screen and (max-width: 1172px) {
 
     .content h1 {

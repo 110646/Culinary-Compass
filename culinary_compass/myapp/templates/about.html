@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Culinary Compass</title>
-        <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
         <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,30 +28,34 @@
                     <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
                 </ul>
             </nav>
-            <div class="content">
-                <h1>About Us:</h1>
-                <p1>Hi there! We're a passionate group of Computer Science major students from Georgia State University, 
-                    driven by our curiosity and enthusiasm for understanding the intricacies of backend development for apps
-                     and websites. Our journey began with a shared love for technology and a desire to explore its limitless possibilities. 
-                     As avid learners, we're constantly honing our skills and embracing new challenges in the dynamic world of programming. 
-                     With a keen interest in the fusion of technology and culinary arts, we embarked on a mission to create a platform that 
-                     seamlessly integrates our expertise in backend development with our appreciation for delicious food. 
-                     Through countless hours of coding, testing, and refining, we've crafted a user-friendly hub where food enthusiasts 
-                     can find recipes, nutritional information, and cooking insights at their fingertips. Beyond our academic pursuits,
-                      we're united by a common goal: to make a meaningful impact through technology. Whether it's through developing 
-                      innovative solutions or fostering a vibrant online community, we're committed to leveraging our skills to enrich the digital landscape. </p1>
-                <div class="Social">
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>    
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-youtube"></i></a>
-                </div>  
-                <a class="text" href="">
-                    <button class="btn">Learn More</button>
-                </a> 
-            </div>
-            <div class="flex">
-                <img src="{% static 'images/us.png' %}">
+            <div class="about-us">
+                <div class="row">
+                    <div class="flex">
+                        <h1>About Us:</h1>
+                        <p1>Hi there! We're a passionate group of Computer Science major students from Georgia State University, 
+                            driven by our curiosity and enthusiasm for understanding the intricacies of backend development for apps
+                            and websites. Our journey began with a shared love for technology and a desire to explore its limitless possibilities. 
+                            As avid learners, we're constantly honing our skills and embracing new challenges in the dynamic world of programming. 
+                            With a keen interest in the fusion of technology and culinary arts, we embarked on a mission to create a platform that 
+                            seamlessly integrates our expertise in backend development with our appreciation for delicious food. 
+                            Through countless hours of coding, testing, and refining, we've crafted a user-friendly hub where food enthusiasts 
+                            can find recipes, nutritional information, and cooking insights at their fingertips. Beyond our academic pursuits,
+                            we're united by a common goal: to make a meaningful impact through technology. Whether it's through developing 
+                            innovative solutions or fostering a vibrant online community, we're committed to leveraging our skills to enrich the digital landscape. </p1>
+                        <div class="Social">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>    
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </div>  
+                        <a class="text" href="">
+                            <button class="btn">Learn More</button>
+                        </a> 
+                    </div>
+                    <div class="flex">
+                        <img src="{% static 'images/us.png' %}">
+                    </div>    
+                </div>
             </div>
         </div>
     </body>
