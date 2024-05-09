@@ -116,6 +116,7 @@ nav ul li a {
 }
 .Social a:hover{
     transform: translateY(-3px);
+
 }
 .btn{
     display: flex;
