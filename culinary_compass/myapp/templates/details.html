@@ -10,10 +10,10 @@
     <nav>
         <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
         <ul>
-            <li><a href="{% url 'myapp:results' %}?query={{ query }}">Back to Results</a></li>
             <label for="check" class="checkbtn">
                 <i class="fa-solid fa-bars"></i>
             </label>
+            <li><a class="back_to_results" href="{% url 'myapp:results' %}?query={{ query }}">Back to Results</a></li>
             <li><a class="top" href="{% url 'myapp:top' %}">Our Top Picks</a></li>
             <li><a class="tips" href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
             <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>

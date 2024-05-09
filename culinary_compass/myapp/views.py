@@ -13,7 +13,7 @@ def home(request):
 
 def results(request):
     query = request.GET.get('query', '')
-    url = f"https://api.spoonacular.com/recipes/complexSearch?query={query}&apiKey={settings.API_KEY}"
+    url = f"https://api.spoonacular.com/recipes/complexSearch?query={query}&apiKey={settings.API_KEY}&addRecipeInformation=true"
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
