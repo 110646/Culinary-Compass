@@ -73,8 +73,7 @@ nav ul li a {
     flex: 0 0 calc(18% - 20px); /* Set the width of each card */
     margin: 0 10px 20px; /* Add margin around each card */
     padding: 3px;
-    background-color: #ffffff;
-    border: 3px solid #ff7800;
+    
 }
 .image {
     width: 100%;
@@ -88,12 +87,13 @@ nav ul li a {
 }
 .card_title {
     font-size: 18px;
-    font-weight: 500;
-    color: #333;
+    font-weight: 600;
+    color: #fff;
 }
 .card_text {
     font-size: 12px;
-    color: #333;
+    font-weight: 400;
+    color: #fff;
 }
 .checkbtn {
     display: none;
