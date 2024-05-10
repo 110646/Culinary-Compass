@@ -70,19 +70,26 @@ nav ul li a {
     font-size: 23px;
     margin-bottom: 8px;
     line-height: 1.7;
-    font-weight:900;
+    font-weight:600;
 }
 .about-us p2{
     font-size: 23px;
     margin-bottom: 8px;
     line-height: 1.7;
-    font-weight:900;
+    font-weight:600;
 }
 .about-us p3{
     font-size: 23px;
     margin-bottom: 8px;
     line-height: 1.7;
-    font-weight:900;
+    font-weight:600;
+}
+.about-us p4{
+    font-size: 23px;
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-weight:600;
+    float:right;
 }
 .about-us img{
     display:block;
