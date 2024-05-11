@@ -23,6 +23,7 @@ nav {
     float: left;
     -webkit-filter: drop-shadow(0px 0.5px 0.5px #a14b00);
     filter: drop-shadow(0px 0.5px 0.5px #a14b00);
+    position: relative;
 }
 nav ul {
     list-style: none;
@@ -62,14 +63,32 @@ nav ul li a {
     margin-bottom: 2px;
     padding:0;
     text-align: left;
-    top: 150px;
+    top: 200px;
     left: 240px;
     line-height: 250pt;
     text-shadow: 7px 5px 5px #000000;
 }
-
+.text .btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 1550px;
+    left: 1093px;
+    background: #000000;
+    color: #ff7800;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(124, 58, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
 .blank{
-    max-width: 700px;
     margin:0 auto;
     padding:0 20px;
     margin-top: 3%;
@@ -82,8 +101,9 @@ nav ul li a {
     margin:0 auto;
     margin-top: 6px;
     float:right;
+    filter: invert(43%) sepia(80%) saturate(1581%) hue-rotate(2deg) brightness(90%) contrast(104%);
     position: absolute;
-    top: 1020px;
+    top: 1070px;
     left: 1053px;
 }
 .blank .title{
@@ -92,27 +112,38 @@ nav ul li a {
     line-height: 1.7;
     font-weight:bold;
     position: absolute;
-    top: 1050px;
+    top: 1100px;
     left: 1233px;
-    text-shadow: 7px 5px 5px #000000;
  }
  .blank .p1{
     font-size: 19px;
     margin-bottom: 8px;
     line-height: 1.7;
-    font-weight:600;
+    font-weight:450;
+    max-width: 500px;
+    position: absolute;
+    top: 1170px;
+    left: 1090px;
  }
  .blank .p2{
     font-size: 19px;
     margin-bottom: 8px;
     line-height: 1.7;
-    font-weight:600;
+    font-weight:450;
+    max-width: 500px;
+    position: absolute;
+    top: 1350px;
+    left: 1090px;
  }
  .blank .p3{
     font-size: 19px;
     margin-bottom: 8px;
     line-height: 1.7;
-    font-weight:600;
+    font-weight:450;
+    max-width: 500px;
+    position: absolute;
+    top: 1440px;
+    left: 1090px;
  } 
 .about-us p1{
     font-size: 19px;
@@ -129,7 +160,7 @@ nav ul li a {
     margin:0 auto;
     margin-top: 330px;
     position: absolute;
-    top: 55px;
+    top: 105px;
     left: 650px;
 }
 .corn img{
@@ -141,7 +172,7 @@ nav ul li a {
     filter: invert(43%) sepia(80%) saturate(1581%) hue-rotate(2deg) brightness(105%) contrast(104%);
     float:right;
     position: absolute;
-    top: 280px;
+    top: 330px;
     left: 1415px;
 }
 .one img{
@@ -151,7 +182,7 @@ nav ul li a {
     margin:0 auto;
     margin-top: 330px;
     position: absolute;
-    top: 1200px;
+    top: 1250px;
     left: 450px;
 }
 .us img{
@@ -161,7 +192,7 @@ nav ul li a {
     margin:0 auto;
     margin-top: 330px;
     position: absolute;
-    top: 590px;
+    top: 640px;
     left: 270px;
     box-shadow: 10px 10px 5px rgb(21, 27, 29);
 }
@@ -174,7 +205,7 @@ nav ul li a {
     margin-bottom: 20px;
     margin-top: 20px;
     position:absolute;
-    top: 815px;
+    top: 865px;
     left: 350px;
 }
 .Social a{
