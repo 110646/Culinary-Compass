@@ -28,7 +28,7 @@
                 {% for item in results %}
                 <div class="card" data-name="foods">
                     <a href="{% url 'myapp:details' %}?recipe_id={{ item.id }}&query={{ query }}">
-                        <img class="image" src="{{ item.image }}" >
+                        <img class="image" src="{{ item.image }}">
                     </a>
                     <div class="card_body">
                     {% if item.name %}
@@ -51,7 +51,7 @@
             background-repeat: no-repeat;
             background-position: center;
             padding: 10px 8%;
-            background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('{% static "images/doodle.jpg" %}');
+            background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('{% static "images/resultsbackground.jpg" %}');
         }
 
     </style>

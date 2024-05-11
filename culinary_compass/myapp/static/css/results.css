@@ -77,9 +77,8 @@ nav ul li a {
 }
 .image {
     width: 100%;
-    height: 210px;
-    object-fit: cover;
-    
+    height: 180px; /* Adjust the height as needed */
+    object-fit: cover; /* Crop the image to cover the specified dimensions */
 }
 .card_body{
     padding: 15px 20px 20px;
