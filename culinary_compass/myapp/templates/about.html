@@ -31,25 +31,12 @@
             <div class="about-us">
                 <div class="row">
                     <div class="flex">
-                        <h1>About Us:</h1>
-                        <h2>Our Background in CS</h2>
-                        <p1>Hi there! We're a passionate group of Computer Science major students from Georgia State University, 
-                            driven by our curiosity and enthusiasm for understanding the intricacies of backend development for apps
-                            and websites. 
-                        <br>
-                        <br>
-                        <p2>Our journey began with a shared love for technology and a desire to explore its limitless possibilities.</p2>
-                        <br>
-                        <br>
-                        <p3>As avid learners, we're constantly honing our skills and embracing new challenges in the dynamic world of programming.</p3>
-                        <br>
-                        <br>
-                        <p4>With a keen interest in the fusion of technology and culinary arts, we embarked on a mission to create a platform that 
+                        <p1>With a keen interest in the fusion of technology and culinary arts, we embarked on a mission to create a platform that 
                             seamlessly integrates our expertise in backend development with our appreciation for delicious food. 
                             Through countless hours of coding, testing, and refining, we've crafted a user-friendly hub where food enthusiasts 
                             can find recipes, nutritional information, and cooking insights at their fingertips. Beyond our academic pursuits,
                             we're united by a common goal: to make a meaningful impact through technology. Whether it's through developing 
-                            innovative solutions or fostering a vibrant online community, we're committed to leveraging our skills to enrich the digital landscape.</p4>
+                            innovative solutions or fostering a vibrant online community, we're committed to leveraging our skills to enrich the digital landscape.</p1>
                         <div class="Social">
                             <a href=""><i class="fab fa-linkedin"></i></a>
                             <a href=""><i class="fab fa-twitter"></i></a>    
@@ -61,10 +48,29 @@
                         </a> 
                     </div>
                     <div class="flex">
-                        <img src="{% static 'images/us.png' %}">
+                        <img src="{% static 'images/coffee.jpg' %}">
+                        <p class="description">About Us</p>
                     </div>    
                 </div>
             </div>
+            <div class="blank">
+                <img src="{% static 'images/blank space.png' %}">
+                <p class="title">Background</p>
+                <p class="p1">Hi there! We're a passionate group of Computer Science major students from Georgia State University, 
+                    driven by our curiosity and enthusiasm for understanding the intricacies of backend development for apps
+                    and websites. </p>
+                <p class="p2">Our journey began with a shared love for technology and a desire to explore its limitless possibilities.</p>
+                <p class="p3">As avid learners, we're constantly honing our skills and embracing new challenges in the dynamic world of programming.</p>
+            </div> 
+            <div class="corn">
+                <img src="{% static 'images/corner.png' %}">
+            </div>    
+            <div class="one">
+                <img src="{% static 'images/Team.jpg' %}">
+            </div>  
+            <div class="us">
+                <img src="{% static 'images/us.png' %}">
+            </div>  
         </div>
     </body>
 
@@ -72,6 +78,7 @@
     <style>
         .container {
             width: 100%;
+            height: 100%;
             min-height: 100vh;
             background-size: cover;
             background-repeat: no-repeat;

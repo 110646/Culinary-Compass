@@ -1,38 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.checkbox {
+    display: none;
+}
+.checkbtn {
+    display: none;
+}
+.logo {
+    width: 325px;
+    cursor: pointer;
+    float: left;
+    -webkit-filter: drop-shadow(0px 0.5px 0.5px #a14b00);
+    filter: drop-shadow(0px 0.5px 0.5px #a14b00);
+}
+nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-right: 60px;
+    
+}
 
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.container{
+    padding:80px opx;
+}
+.about-us{
+    max-width: 1500px;
+    margin:0 auto;
+    padding:0 20px;
+    margin-top: 3%;
+    color: #fff;
+}
 .row{
     display:flex;
     flex-wrap: wrap;
 }
-.about-us h1{
-    font-size: 60px;
-    margin-bottom: 200px;
+.flex .description{
+    position:absolute;
+    font-size: 400px;
+    margin-bottom: 2px;
     padding:0;
-    text-align: center;
+    text-align: left;
+    top: 150px;
+    left: 240px;
+    line-height: 250pt;
+    text-shadow: 7px 5px 5px #000000;
 }
-.about-us h2{
-    font-size: 40px;
-    margin-bottom: 20px;
+
+.blank{
+    max-width: 700px;
+    margin:0 auto;
+    padding:0 20px;
+    margin-top: 3%;
+    color: #fff;
 }
+.blank img{
+    display:block;
+    width: 553px;
+    height: 600px;
+    margin:0 auto;
+    margin-top: 6px;
+    float:right;
+    position: absolute;
+    top: 1020px;
+    left: 1053px;
+}
+.blank .title{
+    font-size: 26px;
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-weight:bold;
+    position: absolute;
+    top: 1050px;
+    left: 1233px;
+    text-shadow: 7px 5px 5px #000000;
+ }
+ .blank .p1{
+    font-size: 19px;
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-weight:600;
+ }
+ .blank .p2{
+    font-size: 19px;
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-weight:600;
+ }
+ .blank .p3{
+    font-size: 19px;
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-weight:600;
+ } 
 .about-us p1{
-    font-size: 23px;
-    margin-bottom: 8px;
-    line-height: 1.7;
-    font-weight:600;
-}
-.about-us p2{
-    font-size: 23px;
-    margin-bottom: 8px;
-    line-height: 1.7;
-    font-weight:600;
-}
-.about-us p3{
-    font-size: 23px;
-    margin-bottom: 8px;
-    line-height: 1.7;
-    font-weight:600;
-}
-.about-us p4{
-    font-size: 23px;
+    font-size: 19px;
+    margin-top: 1600px;
     margin-bottom: 8px;
     line-height: 1.7;
     font-weight:600;
@@ -40,11 +124,46 @@
 }
 .about-us img{
     display:block;
-    max-width: 105%;
+    max-width: 50%;
     height: auto;
     margin:0 auto;
-    margin-top: 350px;
-    border: 5px solid #ffffff;
+    margin-top: 330px;
+    position: absolute;
+    top: 55px;
+    left: 650px;
+}
+.corn img{
+    display:block;
+    max-width: 17%;
+    height: auto;
+    margin:0 auto;
+    margin-top: 6px;
+    filter: brightness(2000);
+    float:right;
+    position: absolute;
+    top: 280px;
+    left: 1415px;
+}
+.one img{
+    display:block;
+    max-width: 25%;
+    height: auto;
+    margin:0 auto;
+    margin-top: 330px;
+    position: absolute;
+    top: 1200px;
+    left: 450px;
+}
+.us img{
+    display:block;
+    max-width: 40%;
+    height: auto;
+    margin:0 auto;
+    margin-top: 330px;
+    position: absolute;
+    top: 590px;
+    left: 270px;
+    box-shadow: 10px 10px 5px rgb(21, 27, 29);
 }
 .flex{
     flex:0 0 50%;
@@ -54,19 +173,22 @@
 .Social{
     margin-bottom: 20px;
     margin-top: 20px;
+    position:absolute;
+    top: 815px;
+    left: 350px;
 }
 .Social a{
     display: inline-block;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    text-align: center;
+    text-align:center;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 13px;
     color:#ffffff;
     background-color:#ff7800;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    transition: all 0.4s ease;
+    box-shadow: 2px 2px 5px #c48b6d;
+    transition: all 0.4s easrgb(68, 36, 1)
 }
 .Social a:hover{
     transform: translateY(-3px);
