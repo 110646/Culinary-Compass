@@ -1,58 +1,91 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Culinary Compass</title>
-        <link rel="stylesheet" href="{% static 'css/results.css' %}">
-        <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    </head>
-    <body>
-        <div class="page">
-            <nav>
-                <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
-                <ul>
-                    <label for="check" class="checkbtn">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
-                    <li><a class="top" href="{% url 'myapp:top' %}">Our Top Picks</a></li>
-                    <li><a class="tips" href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
-                    <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
-                </ul>
-            </nav>
-            <div class="filterable_cards">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Compass</title>
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+    <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <nav>
+            <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
+            <ul>
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <li><a class="top" href="{% url 'myapp:top' %}">Our Top Picks</a></li>
+                <li><a class="tips" href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
+                <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="products">
+            <div class="container">
+                <div class="flex">
+                    <p class="description">{{ query }}</p>
+                </div>    
                 {% for item in results %}
-                <div class="card" data-name="foods">
+                <div class="product-items">
+                    <!-- single product -->
                     <a href="{% url 'myapp:details' %}?recipe_id={{ item.id }}&query={{ query }}">
-                        <img class="image" src="{{ item.image }}">
+                        <div class="product">
+                            <div class="product-content">
+                                <div class="product-img">
+                                    <img class="itemimg" src="{{ item.image }}" alt="product image">
+                                </div>
+                                <div class="product-btns">
+                                    <button type="button" class="btn-cart"> add to cart
+                                        <span><i class="fas fa-plus"></i></span>
+                                    </button>
+                                    <button type="button" class="btn-buy"> buy now
+                                        <span><i class="fas fa-shopping-cart"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-info-top">
+                                    <h2 class="sm-title">culinary compass</h2>
+                                    <div class="rating">
+                                        <span><i class="fas fa-star"></i></span>
+                                        <span><i class="fas fa-star"></i></span>
+                                        <span><i class="fas fa-star"></i></span>
+                                        <span><i class="fas fa-star"></i></span>
+                                        <span><i class="far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                {% if item.name %}
+                                    <a href="#" class="product-name">{{ item.name }}</a>
+                                {% else %}
+                                    <a href="#" class="product-name">{{ item.title }}</a>
+                                {% endif %}
+                                <p class="product-price">{{ item.summary | striptags }}</p>
+                            </div>
+                            <div class="off-info">
+                                <h2 class="sm-title">CULINARY COMPASS</h2>
+                            </div>
+                        </div>
                     </a>
-                    <div class="card_body">
-                    {% if item.name %}
-                        <h6 class="card_title">{{ item.name }}</h6>
-                    {% else %}
-                        <h6 class="card_title">{{ item.title }}</h6>
-                    {% endif %}
-                        <p class="card_text">{{ item.summary | striptags }}</p>
-                    </div>
-                </div>
                 {% endfor %}
+                </div>
             </div>
         </div>
-    </body>
-    <style>
-        .page {
-            width: 100%;
-            min-height: 100vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 10px 8%;
-            background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('{% static "images/resultsbackground.jpg" %}');
-        }
+    </div>
+</body>
 
-    </style>
-</html>
+
+<style>
+    .page {
+        width: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 10px 8%;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('{% static "images/bestbackground.jpg" %}');
+    }
+</style>
