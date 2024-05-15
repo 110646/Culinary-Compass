@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Encode Sans Semi Expanded", sans-serif;
     box-sizing: border-box;
 }
 nav {
@@ -10,6 +10,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+    margin-bottom: 2250px;
 }
 .checkbox {
     display: none;
@@ -59,7 +60,7 @@ nav ul li a {
 }
 .flex .description{
     position:absolute;
-    font-size: 400px;
+    font-size: 405px;
     margin-bottom: 2px;
     padding:0;
     text-align: left;
@@ -71,16 +72,17 @@ nav ul li a {
 .text .btn{
     padding: 10px 20px;
     border-radius: 5px;
+    width: 150px;
+    height: 75px;
     position: absolute;
     top: 1550px;
-    left: 1093px;
-    background: #000000;
-    color: #ff7800;
-    font-weight: 500;
+    left: 1255px;
+    background: #ffffff;
+    color: #000000;
+    font-weight: 800;
     cursor: pointer;
-    font-size: 15px;
-    padding: 10px 30px;
-    text-decoration: none;
+    font-size: 17px;
+    text-decoration:solid;
     cursor: pointer;
     box-shadow: 0 0 10px rgb(124, 58, 0);
     -webkit-transition-duration: 0.3s;
@@ -107,13 +109,13 @@ nav ul li a {
     left: 1053px;
 }
 .blank .title{
-    font-size: 26px;
+    font-size: 35px;
     margin-bottom: 8px;
     line-height: 1.7;
     font-weight:bold;
     position: absolute;
     top: 1100px;
-    left: 1233px;
+    left: 1215px;
  }
  .blank .p1{
     font-size: 19px;
@@ -122,7 +124,7 @@ nav ul li a {
     font-weight:450;
     max-width: 500px;
     position: absolute;
-    top: 1170px;
+    top: 1190px;
     left: 1090px;
  }
  .blank .p2{
@@ -132,7 +134,7 @@ nav ul li a {
     font-weight:450;
     max-width: 500px;
     position: absolute;
-    top: 1350px;
+    top: 1352px;
     left: 1090px;
  }
  .blank .p3{
@@ -142,16 +144,29 @@ nav ul li a {
     font-weight:450;
     max-width: 500px;
     position: absolute;
-    top: 1440px;
+    top: 1426px;
     left: 1090px;
  } 
-.about-us p1{
-    font-size: 19px;
-    margin-top: 1600px;
-    margin-bottom: 8px;
-    line-height: 1.7;
-    font-weight:600;
-    float:right;
+ .journey img{
+    display:block;
+    width: 583px;
+    height: 660px;
+    height: auto;
+    margin:0 auto;
+    position: absolute;
+    top: 1695px;
+    left: 1025px;
+    filter: brightness(39%);
+ }
+.journey .p1{
+    font-size: 24px;
+    color: #ffffff;
+    max-width: 450px;
+    position: absolute;
+    text-align:center;
+    font-weight:bold;
+    right: 377px;
+    top: 1735px;
 }
 .about-us img{
     display:block;
@@ -175,16 +190,6 @@ nav ul li a {
     top: 330px;
     left: 1415px;
 }
-.one img{
-    display:block;
-    max-width: 25%;
-    height: auto;
-    margin:0 auto;
-    margin-top: 330px;
-    position: absolute;
-    top: 1250px;
-    left: 450px;
-}
 .us img{
     display:block;
     max-width: 40%;
@@ -196,6 +201,27 @@ nav ul li a {
     left: 270px;
     box-shadow: 10px 10px 5px rgb(21, 27, 29);
 }
+.one img{
+    display:block;
+    max-width: 31%;
+    height: auto;
+    margin:0 auto;
+    margin-top: 330px;
+    position: absolute;
+    top: 1200px;
+    left: 270px;
+}
+.one .team{
+    font-size: 144px;
+    margin-bottom: 26px;
+    line-height: 1.7;
+    font-weight:bold;
+    position: absolute;
+    top: 1860px;
+    left: 490px;
+    color: #fff;
+    transform:rotate(-90deg);
+}
 .flex{
     flex:0 0 50%;
     max-width:50%;
@@ -205,7 +231,7 @@ nav ul li a {
     margin-bottom: 20px;
     margin-top: 20px;
     position:absolute;
-    top: 865px;
+    top: 880px;
     left: 350px;
 }
 .Social a{
@@ -218,7 +244,7 @@ nav ul li a {
     margin-right: 13px;
     color:#ffffff;
     background-color:#ff7800;
-    box-shadow: 2px 2px 5px #c48b6d;
+    box-shadow: 2px 2px 10px #c48b6d;
     transition: all 0.4s easrgb(68, 36, 1)
 }
 .Social a:hover{
