@@ -75,8 +75,8 @@ nav ul li a {
     width: 500px;
     height: 50px;
     position: absolute;
-    top: 1600px;
-    left: 1063px;
+    top: 1610px;
+    left: 1062px;
     border: 0;
     outline: 0;
     border-radius: 5px;
@@ -118,15 +118,15 @@ nav ul li a {
     left: 1215px;
  }
  .blank .p1{
-    font-size: 30px;
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+    font-size: 28px;
     margin-bottom: 8px;
-    line-height: 1.5;
-    font-weight: 400;
-    max-width: 550px;
+    line-height: 1.6;
+    max-width: 600px;
+    font-weight: bold;
     position: absolute;
     top: 1080px;
     left: 1060px;
-    font-family: "Vollkorn", serif;
     z-index: 5;
  }
  .blank .p2{
@@ -161,14 +161,14 @@ nav ul li a {
     filter: brightness(39%);
  }
 .journey .p1{
-    font-size: 24px;
+    font-size: 28px;
     color: #ffffff;
-    max-width: 450px;
+    max-width: 700px;
+    line-height: 1.6;
     position: absolute;
-    text-align:center;
     font-weight:bold;
-    right: 377px;
-    top: 1735px;
+    left: 1060px;
+    top: 1700px;
 }
 .about-us img{
     display:block;
