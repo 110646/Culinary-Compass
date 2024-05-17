@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="page">
@@ -27,7 +31,8 @@
         <div class="products">
             <div class="container">
                 <div class="flex">
-                    <p class="description">{{ query }}</p>
+                    <div class="description">{{ query }}</div> 
+                    <p class="background">{{ query }}</p>
                 </div>    
                 {% for item in results %}
                 <div class="product-items">
@@ -86,7 +91,7 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 10px 8%;
-        background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('{% static "images/Header.jpg" %}');
+        background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('{% static "images/ravioli.jpg" %}');
     }
     
 </style>

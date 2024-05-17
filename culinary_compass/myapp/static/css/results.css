@@ -295,12 +295,43 @@ body{
     cursor: pointer;
     text-decoration: none;
 }
-.flex .description{
-    font-size: 350px;
-    padding:0;
-    text-align: left;
+.flex {
+    font-size: 210px;
+    position:relative;
+    text-align: justify;
     color: #fff;
-    line-height: 250pt;
     text-shadow: 7px 5px 5px #000000;
+    margin-bottom: -1em;
+
+}
+.flex:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.description {
+    font-family: "Luxurious Script", cursive;
+    font-weight: 500;
+    font-size: 300px;
+    -webkit-transform:scale(1.2,1);
+    transform: scale(1.2,1);
+    position: relative;
+    right: -130px;
+    color: #ff7800;
+}
+
+.background {
+    position: absolute;
+    right: 180px;
+    top: 50px;
+    z-index: 10;
+    color: #fff;
+    font-size: 170px;
+}
+.background:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
 }
 
