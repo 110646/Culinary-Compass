@@ -30,10 +30,9 @@
         </nav>
         <div class="products">
             <div class="container">
-                <div class="flex">
-                    <div class="description">{{ query }}</div> 
-                    <p class="background">{{ query }}</p>
-                </div>    
+                <div class="header">
+                    <h1 data-text="Header">{{ query }}</h1>
+                </div>   
                 {% for item in results %}
                 <div class="product-items">
                     <!-- single product -->
