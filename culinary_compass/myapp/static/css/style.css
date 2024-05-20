@@ -106,7 +106,7 @@ nav ul li a {
     .content h1 {
         font-size: 35px;
     }
-    .content p1 {
+    .content p {
         font-size: 14px;
     }
     nav {
@@ -139,7 +139,7 @@ nav ul li a {
     .content h1 {
         font-size: 25px;
     }
-    .content p1 {
+    .content p {
         font-size: 12px;
     }
     .checkbox {
@@ -251,9 +251,8 @@ nav ul li a {
     .content h1 {
         font-size: 16px;
     }
-    .content p1 {
+    .content p {
         font-size: 8px;
-
     }
     nav ul li a {
         font-size: 12px;

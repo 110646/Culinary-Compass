@@ -543,6 +543,17 @@ h1:hover::before {
     .content form input{
         font-size: 8px;
     }
+    .itemimg {
+        width: 75%;
+        display: block;
+        height: 100px; /* Adjust the height as needed */
+        object-fit: cover; /* Crop the image to cover the specified dimensions */
+        border-radius: 50%;
+        zoom: 150%;
+        position: relative;
+        right: -22px;
+    
+    }
 }   
  
 
