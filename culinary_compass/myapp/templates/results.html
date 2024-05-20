@@ -14,10 +14,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
 
+
 </head>
 <body>
     <div class="page">
         <nav>
+            <input type="checkbox" id="check" class="checkbox">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
             <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
             <ul>
                 <label for="check" class="checkbtn">
@@ -30,10 +35,7 @@
         </nav>
         <div class="products">
             <div class="container">
-                <div class="flex">
-                    <div class="description">{{ query }}</div> 
-                    <p class="background">{{ query }}</p>
-                </div>    
+                <h1 data-text="{{ query }}">{{ query }}</h1>  
                 {% for item in results %}
                 <div class="product-items">
                     <!-- single product -->
