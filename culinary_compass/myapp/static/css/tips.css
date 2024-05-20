@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Playfair Display", serif;
     box-sizing: border-box;
 }
 nav {
@@ -43,62 +43,23 @@ nav ul li a {
     text-decoration: none;
 }
 
-.content {
-    margin-top: 14%;
-    color: #fff;
-    max-width: 1400px;
+.content .des{
+    margin-top: 50px;
+    font-size: 200px;
+    font-weight: 600;
+    color: #a14b00;
+    font-family: "Parisienne", cursive;
+    text-align: center;
 }
-.content h1 {
-    font-size: 50px;
+.content .description{
+    font-size: 150px;
     font-weight: 600;
     margin-bottom: 40px;
-
-}
-.content p1{
-    font-size: 18px;
-}
-.content form{
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 30px;
-
-}
-.content form input{
-    border: 0;
-    outline: 0;
-    width: 100%;
-    font-size: 16px;
-    padding-left: 10px;
-}
-.btn{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    background: #ff7800;
     color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 10px 30px;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
-
-}
-.btn:hover, .btn:focus, .btn:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    position:absolute;
+    top: 200px;
+    left: 560px;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 1172px) {
