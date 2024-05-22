@@ -13,7 +13,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -35,7 +40,15 @@
         </nav>
         <div class="products">
             <div class="container">
-                <h1 data-text="{{ query }}">{{ query }}</h1>  
+                <h1 data-text="{{ query }}">{{ query }}</h1> 
+                <div class="marquee-w">
+                    <div class="marquee">
+                        <span>{{ query }}&nbsp;&nbsp;&nbsp;</span>
+                    </div>
+                    <div class="marquee marquee2">
+                        <span>{{ query }}&nbsp;&nbsp;&nbsp;</span>
+                    </div>
+                </div> 
                 {% for item in results %}
                 <div class="product-items">
                     <!-- single product -->
