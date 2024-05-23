@@ -340,11 +340,12 @@ h1:hover::before {
     font-family: Geneva, Tahoma, Verdana, sans-serif;
     display: block;
     width: 2000px;
-    height: 200px;
-    top: -90px;
+    height: 210px;
+    top: -80px;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    
 }
 .marquee {
     position: absolute;
@@ -384,6 +385,10 @@ h1:hover::before {
     100% {
         transform: translate(0, 0);
     }
+}
+.product-items {
+    position: relative;
+    top: -100px;
 }
 
 @media only screen and (max-width: 1172px) {
