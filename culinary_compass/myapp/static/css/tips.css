@@ -64,37 +64,63 @@ nav ul li a {
     top: 200px;
     left: 545px;
 }
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-.marquee {
-    display: flex;
-    justify-content: flex-start;
-    background: transparent;
-    overflow: hidden;
-}
 
-h1{
-   font-size: 48px;
-   text-transform: uppercase;
-   color:#ff7700;
-   -webkit-text-stroke-width: 0.1px;
-   -webkit-text-stroke-color: #fff;
-   white-space: nowrap;
-   padding: 0 6rem;
-   letter-spacing: 1px;
-   animation: move-rt1 6000ms linear infinite;
-}
-
-@keyframes move-rt1{
-    0%{
+@keyframes slide{
+    from {
         transform: translateX(0);
     }
-    100%{
-        transform: translateX(100%);
+    to {
+        transform: translateX(-100%)
     }
 }
+
+body {
+    background: #fff;
+}
+.logos{
+    overflow: hidden;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.104);
+    white-space: nowrap;
+    position: relative;
+    top: 360px;
+}
+
+.logos:before,
+.logos:after{
+    position:absolute;
+    top:0;
+    width: 200px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before{
+    left:0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after{
+    right:0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.logos-slide img{
+    height: 39px;
+    margin: 0 20px;
+}
+
 
 @media only screen and (max-width: 1172px) {
 
