@@ -389,6 +389,10 @@ h1:hover::before {
 .product-items {
     position: relative;
     top: -100px;
+    
+}
+.product {
+    margin-bottom: 200px;
 }
 
 @media only screen and (max-width: 1172px) {
