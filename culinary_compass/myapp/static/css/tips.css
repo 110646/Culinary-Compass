@@ -84,28 +84,10 @@ body {
     white-space: nowrap;
     position: relative;
     top: 360px;
+    width: 1980px;
+    right: 216px;
 }
 
-.logos:before,
-.logos:after{
-    position:absolute;
-    top:0;
-    width: 200px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
-
-.logos:before{
-    left:0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos:after{
-    right:0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-
-}
 
 .logos:hover .logos-slide {
     animation-play-state: paused;
@@ -316,4 +298,5 @@ body {
     .content form input{
         font-size: 8px;
     }
+}
 }   
