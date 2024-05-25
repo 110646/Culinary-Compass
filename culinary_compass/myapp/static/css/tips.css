@@ -65,6 +65,18 @@ nav ul li a {
     left: 545px;
 }
 
+.back .img{
+    position:relative;
+    top: 400px;
+    left: 200px;
+}
+
+.ground .img{
+    position:relative;
+    top: 400px;
+    left: 200px;
+}
+
 @keyframes slide{
     from {
         transform: translateX(0);
@@ -143,6 +155,7 @@ body {
         cursor: pointer;
         float: left;
     }
+}
     
 @media only screen and (max-width: 917px) {
     .checkbtn {
@@ -316,4 +329,4 @@ body {
     .content form input{
         font-size: 8px;
     }
-}   
+} 
