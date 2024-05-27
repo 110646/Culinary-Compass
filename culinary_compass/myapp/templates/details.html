@@ -1,9 +1,12 @@
 {% load static %}
+{% load custom_filters %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Details</title>
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
     
 </head>
 <body>
@@ -22,30 +25,34 @@
     </nav>
 
     <div class="container">
-        <div class="content">
-            <h1>{{ recipe.title }}</h1>
+        <div class="recipe-img">
             <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
-            <p>Servings: {{ recipe.servings }}</p>
-            <p>Ready in Minutes: {{ recipe.readyInMinutes }}</p>
-            <p>Vegitarian: {{ recipe.vegitarian }} </p>
-            <p>Dish Type: {{ recipe.dishTypes }}</p>
-            <!-- Display other recipe details as needed -->
+        </div>
+
+        <div class="recipe-information">
+            <h1>{{ recipe.title }}</h1>
+            <p class="description">{{ recipe.summary | striptags }}</p>
+            
+            <div class="recipe-prep-time">
+                <h3>Preperation Time</h3>
+                <ul>
+                    <li><span>Total:</span>Approximately {{ recipe.readyInMinutes }} minutes</li>
+                    <li><span>Preperation:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
+                    <li><span>Cooing:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="recipe-step">
             <h2>Ingredients</h2>
-            <ul>
+            <ul class="ingredients">
                 {% for ingredient in recipe.extendedIngredients %}
-                    <li>{{ ingredient.original }}</li>
+                    <li><span>{{ ingredient.original }}</span></li>
                 {% endfor %}
             </ul>
-            <h2>Instructions</h2>
-            <ol>
-                {% for step in recipe.analyzedInstructions %}
-                    {% for instruction in step.steps %}
-                        <li>{{ instruction.step }}</li>
-                    {% endfor %}
-                {% endfor %}
-            </ol>
-            <!-- Add more details here -->
         </div>
+
+
     </div>
 
     <!-- Add any JavaScript or scripts here -->
@@ -61,8 +68,5 @@
             background-position: center;
             padding: 10px 8%;
             background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/Header.jpg" %}');
-    }
-    .content {
-        color: white;
     }
 </style>
