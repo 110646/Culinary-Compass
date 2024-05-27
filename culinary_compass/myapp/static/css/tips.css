@@ -47,34 +47,182 @@ nav ul li a {
 
 .content .des{
     margin-top: 50px;
-    font-size: 300px;
+    font-size: 200px;
     font-weight: 600;
     color: #ff7700;
-    font-family: "Luxurious Script", cursive;
     position:absolute;
-    top: 70px;
-    left: 420px;
+    top: 130px;
+    left: 460px;
 }
 .content .description{
-    font-size: 150px;
+    font-size: 197px;
     font-weight: 600;
     margin-bottom: 40px;
     color: #fff;
     position:absolute;
-    top: 200px;
-    left: 545px;
+    top: 182px;
+    left: 469px;
 }
 
-.back .img{
-    position:relative;
-    top: 400px;
-    left: 200px;
+.plate .one{
+    max-width: 50%;
+    position: absolute;
+    top: 495px;
+    left: 50px;
+}
+.plate .p1{
+    width: 590px;
+    height: 589px;
+    position: absolute;
+    top: 683px;
+    left: 236px;
+}
+.plate .h1{
+    font-size: 150px;
+    font-weight: 600;
+    position: absolute;
+    top: 630px;
+    left: 1013px;
+    color:#fff;
 }
 
-.ground .img{
-    position:relative;
-    top: 400px;
-    left: 200px;
+.plate .s1{
+    max-width: 830px;
+    font-size: 45px;
+    font-weight: 600;
+    position: absolute;
+    top: 890px;
+    left: 1000px;
+    color:#fff;
+}
+
+.plate .two{
+    max-width: 50%;
+    position: absolute;
+    top: 1190px;
+    left: 900px;
+}
+.plate .p2{
+    width: 599px;
+    height: 590px;
+    position: absolute;
+    top: 1377px;
+    left: 1081px;
+}
+
+.plate .h2{
+    font-size: 150px;
+    font-weight: 600;
+    position: absolute;
+    top: 1340px;
+    left: 110px;
+    color:#fff;
+}
+
+.plate .s2{
+    max-width: 900px;
+    font-size: 40px;
+    font-weight: 600;
+    position: absolute;
+    top: 1590px;
+    left: 100px;
+    color:#fff;
+}
+
+.plate .three{
+    max-width: 50%;
+    position: absolute;
+    top: 1855px;
+    left: 50px;
+}
+.plate .p3{
+    width: 634px;
+    height: 646.5px;
+    position: absolute;
+    top: 2008px;
+    left: 223px;
+}
+.plate .h3{
+    font-size: 120px;
+    font-weight: 600;
+    position: absolute;
+    top: 2080px;
+    left: 1040px;
+    color:#fff;
+}
+
+.plate .s3{
+    max-width: 900px;
+    font-size: 50px;
+    font-weight: 600;
+    position: absolute;
+    top: 2280px;
+    left: 1005px;
+    color:#fff;
+}
+
+.plate .four{
+    max-width: 50%;
+    position: absolute;
+    top: 2540px;
+    left: 900px;
+}
+.plate .p4{
+    width: 629px;
+    height: 612px;
+    position: absolute;
+    top: 2712px;
+    left: 1072px;
+}
+.plate .h4{
+    font-size: 150px;
+    font-weight: 600;
+    position: absolute;
+    top: 2720px;
+    left: 240px;
+    color:#fff;
+}
+
+.plate .s4{
+    max-width: 900px;
+    font-size: 45px;
+    font-weight: 600;
+    position: absolute;
+    top: 2970px;
+    left: 100px;
+    color:#fff;
+}
+
+.plate .five{
+    max-width: 50%;
+    position: absolute;
+    top: 1855px;
+    left: 50px;
+}
+.plate .p5{
+    width: 634px;
+    height: 646.5px;
+    position: absolute;
+    top: 2008px;
+    left: 223px;
+}
+.plate .h5{
+    font-size: 120px;
+    font-weight: 600;
+    position: absolute;
+    top: 2080px;
+    left: 1040px;
+    color:#fff;
+}
+
+.plate .s5{
+    max-width: 900px;
+    font-size: 50px;
+    font-weight: 600;
+    position: absolute;
+    top: 2280px;
+    left: 1005px;
+    color:#fff;
 }
 
 @keyframes slide{
@@ -95,29 +243,11 @@ body {
     background: rgba(255, 255, 255, 0.104);
     white-space: nowrap;
     position: relative;
-    top: 360px;
+    top: 350px;
+    width: 1980px;
+    right: 216px;
 }
 
-.logos:before,
-.logos:after{
-    position:absolute;
-    top:0;
-    width: 200px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
-
-.logos:before{
-    left:0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos:after{
-    right:0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-
-}
 
 .logos:hover .logos-slide {
     animation-play-state: paused;
@@ -133,6 +263,43 @@ body {
     margin: 0 20px;
 }
 
+@keyframes slide{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+body {
+    background: #fff;
+}
+.logos1{
+    overflow: hidden;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.104);
+    white-space: nowrap;
+    position: relative;
+    top: 4050px;
+    width: 1980px;
+    right: 216px;
+}
+
+
+.logos1:hover .logos-slide1 {
+    animation-play-state: paused;
+}
+
+.logos-slide1{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.logos-slide1 img{
+    height: 39px;
+    margin: 0 20px;
+}
 
 @media only screen and (max-width: 1172px) {
 
@@ -329,4 +496,4 @@ body {
     .content form input{
         font-size: 8px;
     }
-} 
+}
