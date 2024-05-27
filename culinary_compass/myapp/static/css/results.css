@@ -393,7 +393,7 @@ h1:hover::before {
 }
 .product {
     margin-bottom: 200px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 @media only screen and (max-width: 1172px) {
