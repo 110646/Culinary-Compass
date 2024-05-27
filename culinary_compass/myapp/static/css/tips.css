@@ -87,8 +87,8 @@ nav ul li a {
 }
 
 .plate .s1{
-    max-width: 830px;
-    font-size: 45px;
+    max-width: 800px;
+    font-size: 40px;
     font-weight: 600;
     position: absolute;
     top: 890px;
@@ -152,8 +152,8 @@ nav ul li a {
 }
 
 .plate .s3{
-    max-width: 900px;
-    font-size: 50px;
+    max-width: 850px;
+    font-size: 40px;
     font-weight: 600;
     position: absolute;
     top: 2280px;
@@ -179,13 +179,13 @@ nav ul li a {
     font-weight: 600;
     position: absolute;
     top: 2720px;
-    left: 240px;
+    left: 260px;
     color:#fff;
 }
 
 .plate .s4{
     max-width: 900px;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     position: absolute;
     top: 2970px;
@@ -196,31 +196,31 @@ nav ul li a {
 .plate .five{
     max-width: 50%;
     position: absolute;
-    top: 1855px;
+    top: 3205px;
     left: 50px;
 }
 .plate .p5{
-    width: 634px;
-    height: 646.5px;
+    width: 623px;
+    height: 613px;
     position: absolute;
-    top: 2008px;
-    left: 223px;
+    top: 3380px;
+    left: 219.5px;
 }
 .plate .h5{
     font-size: 120px;
     font-weight: 600;
     position: absolute;
-    top: 2080px;
-    left: 1040px;
+    top: 3430px;
+    left: 1130px;
     color:#fff;
 }
 
 .plate .s5{
-    max-width: 900px;
-    font-size: 50px;
+    max-width: 850px;
+    font-size: 40px;
     font-weight: 600;
     position: absolute;
-    top: 2280px;
+    top: 3630px;
     left: 1005px;
     color:#fff;
 }
@@ -281,7 +281,7 @@ body {
     background: rgba(255, 255, 255, 0.104);
     white-space: nowrap;
     position: relative;
-    top: 4050px;
+    top: 3980px;
     width: 1980px;
     right: 216px;
 }
