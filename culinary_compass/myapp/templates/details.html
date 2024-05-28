@@ -1,66 +1,76 @@
 {% load static %}
 {% load custom_filters %}
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Details</title>
-    <link rel="stylesheet" href="{% static 'css/details.css' %}">
-    
+    <title>Culinary Compass</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">   
 </head>
 <body>
-    <nav>
-        <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
-        <ul>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="check" class="checkbox">
             <label for="check" class="checkbtn">
                 <i class="fa-solid fa-bars"></i>
             </label>
-            <li><a class="back_to_results" href="{% url 'myapp:results' %}?query={{ query }}">Back to Results</a></li>
-            <li><a class="top" href="{% url 'myapp:top' %}">Our Top Picks</a></li>
-            <li><a class="tips" href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
-            <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
-            <!-- Add more navigation links if needed -->
-        </ul>
-    </nav>
-
-    <div class="container">
-        <div class="recipe-img">
-            <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
-        </div>
-
-        <div class="recipe-information">
-            <h1>{{ recipe.title }}</h1>
-            <p class="description">{{ recipe.summary | striptags }}</p>
+            <a href="/"><img src="{% static 'images/Culinary Compass Logo.png' %}" class="logo"></a>
+            <ul>
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <li><a class="back" href="{% url 'myapp:results' %}?query={{ query }}">
+                    <i class="fa-solid fa-caret-left"></i> Back to Results
+                </a></li>
+                <li><a class="top" href="{% url 'myapp:top' %}">Our Top Picks</a></li>
+                <li><a class="tips" href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
+                <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
             
-            <div class="recipe-prep-time">
-                <h3>Preperation Time</h3>
-                <ul>
-                    <li><span>Total:</span>Approximately {{ recipe.readyInMinutes }} minutes</li>
-                    <li><span>Preperation:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
-                    <li><span>Cooing:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
+            <div class="recipe-img">
+                <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+            </div>
+    
+            <div class="recipe-information">
+                <h1>{{ recipe.title }}</h1>
+                <p class="description" style="max-width: 800px">{{ recipe.summary | striptags }}</p>
+               
+                <div class="recipe-prep-time">
+                    <h3>Preperation Time</h3>
+                    <ul>
+                        <li><span>Total:</span> Approximately {{ recipe.readyInMinutes }} minutes</li>
+                        <li><span>Preperation:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
+                        <li><span>Cooing:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="recipe-step">
+                <h2>Ingredients</h2>
+                <ul class="ingredients">
+                    {% for ingredient in recipe.extendedIngredients %}
+                        <li><span>{{ ingredient.original }}</span></li>
+                    {% endfor %}
                 </ul>
             </div>
+        </div>       
         </div>
-
-        <div class="recipe-step">
-            <h2>Ingredients</h2>
-            <ul class="ingredients">
-                {% for ingredient in recipe.extendedIngredients %}
-                    <li><span>{{ ingredient.original }}</span></li>
-                {% endfor %}
-            </ul>
-        </div>
-
-
     </div>
-
-    <!-- Add any JavaScript or scripts here -->
 </body>
 </html>
-
-<style>
-     .container {
+<!--This will be the makshift css file for the background image rendering for the project-->
+    <style>
+        .container {
             width: 100%;
             min-height: 100vh;
             background-size: cover;
@@ -68,5 +78,6 @@
             background-position: center;
             padding: 10px 8%;
             background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/Header.jpg" %}');
-    }
-</style>
+        }
+    </style>
+</html>
