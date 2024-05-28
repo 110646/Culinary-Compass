@@ -45,23 +45,33 @@ nav ul li a {
     font-size: 16px;
 }
 
-.content .des{
-    margin-top: 50px;
-    font-size: 200px;
-    font-weight: 600;
-    color: #ff7700;
-    position:absolute;
-    top: 130px;
-    left: 460px;
+h1 {
+    font-size: 210px;
+    text-transform: uppercase;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 3px #ff7800;
+    position: absolute;
+    left:230px;
+    display: inline-block;
+    z-index: 5;
 }
-.content .description{
-    font-size: 197px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    color: #fff;
-    position:absolute;
-    top: 182px;
-    left: 469px;
+
+h1::before {
+    content: "Kitchen Tips";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #ff7800;
+    z-index: 3;
+    -webkit-text-stroke: 3px #ff7800;
+    transition: width 1s ease-in-out;
+    white-space: nowrap;
+}
+
+h1:hover::before {
+    width: 100%;
 }
 
 .plate .one{
@@ -71,18 +81,18 @@ nav ul li a {
     left: 50px;
 }
 .plate .p1{
-    width: 590px;
+    width: 593px;
     height: 589px;
     position: absolute;
     top: 683px;
-    left: 236px;
+    left: 234px;
 }
 .plate .h1{
     font-size: 150px;
     font-weight: 600;
     position: absolute;
     top: 630px;
-    left: 1013px;
+    left: 990px;
     color:#fff;
 }
 
@@ -103,11 +113,11 @@ nav ul li a {
     left: 900px;
 }
 .plate .p2{
-    width: 599px;
+    width: 601px;
     height: 590px;
     position: absolute;
     top: 1377px;
-    left: 1081px;
+    left: 1080px;
 }
 
 .plate .h2{
@@ -115,7 +125,7 @@ nav ul li a {
     font-weight: 600;
     position: absolute;
     top: 1340px;
-    left: 110px;
+    left: 80px;
     color:#fff;
 }
 
@@ -147,7 +157,7 @@ nav ul li a {
     font-weight: 600;
     position: absolute;
     top: 2080px;
-    left: 1040px;
+    left: 1020px;
     color:#fff;
 }
 
@@ -168,18 +178,18 @@ nav ul li a {
     left: 900px;
 }
 .plate .p4{
-    width: 629px;
+    width: 631px;
     height: 612px;
     position: absolute;
     top: 2712px;
-    left: 1072px;
+    left: 1071px;
 }
 .plate .h4{
     font-size: 150px;
     font-weight: 600;
     position: absolute;
     top: 2720px;
-    left: 260px;
+    left: 240px;
     color:#fff;
 }
 
@@ -211,7 +221,7 @@ nav ul li a {
     font-weight: 600;
     position: absolute;
     top: 3430px;
-    left: 1130px;
+    left: 1115px;
     color:#fff;
 }
 
@@ -222,6 +232,38 @@ nav ul li a {
     position: absolute;
     top: 3630px;
     left: 1005px;
+    color:#fff;
+}
+
+.plate .six{
+    max-width: 50%;
+    position: absolute;
+    top: 3890px;
+    left: 900px;
+}
+.plate .p6{
+    width: 622px;
+    height: 617px;
+    position: absolute;
+    top: 4060px;
+    left: 1067px;
+}
+.plate .h6{
+    font-size: 150px;
+    font-weight: 600;
+    position: absolute;
+    top: 4070px;
+    left: 220px;
+    color:#fff;
+}
+
+.plate .s6{
+    max-width: 870px;
+    font-size: 40px;
+    font-weight: 600;
+    position: absolute;
+    top: 4320px;
+    left: 100px;
     color:#fff;
 }
 
@@ -281,7 +323,7 @@ body {
     background: rgba(255, 255, 255, 0.104);
     white-space: nowrap;
     position: relative;
-    top: 3980px;
+    top: 4680px;
     width: 1980px;
     right: 216px;
 }
