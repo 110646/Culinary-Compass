@@ -310,7 +310,7 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     color: transparent;
-    -webkit-text-stroke: 3px #544d47;
+    -webkit-text-stroke: 3px #ff7800;
     position: relative;
     display: inline-block;
     z-index: 5;
