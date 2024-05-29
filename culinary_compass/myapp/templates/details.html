@@ -71,10 +71,43 @@
 
                 <div class="instructions">
                     <div class="items">
-                        {{% recipe.instructions %}}
+                        {{ recipe.instructions|add_newlines|safe }}
                     </div>
                 </div>
             </div>
+
+            <hr>
+
+            {% if recipe.nutrition and recipe.nutrition.nutrients %}
+            <div class="nutrition-info">
+                <h2>Nutrition Information</h2><p>*per serving</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nutrient</th>
+                            <th>Amount</th>
+                            <th>Unit</th>
+                            <th>% Daily Needs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for nutrient in recipe.nutrition.nutrients %}
+                            {% if nutrient.name|is_essential_nutrient %}
+                            <tr>
+                                <td>{{ nutrient.name }}</td>
+                                <td>{{ nutrient.amount }}</td>
+                                <td>{{ nutrient.unit }}</td>
+                                <td>{{ nutrient.percentOfDailyNeeds }}</td>
+                            </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <p>No nutrition information available.</p>
+            {% endif %}
+
         </div>       
         </div>
     </div>
