@@ -52,7 +52,8 @@ h1 {
     color: transparent;
     -webkit-text-stroke: 3px #ff7800;
     position: absolute;
-    left:230px;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    left:160px;
     display: inline-block;
     z-index: 5;
 }
@@ -64,6 +65,7 @@ h1::before {
     height: 100%;
     overflow: hidden;
     color: #ff7800;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
     z-index: 3;
     -webkit-text-stroke: 3px #ff7800;
     transition: width 1s ease-in-out;
@@ -72,6 +74,7 @@ h1::before {
 
 h1:hover::before {
     width: 100%;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
 }
 
 .plate .one{
