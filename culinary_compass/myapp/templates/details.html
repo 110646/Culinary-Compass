@@ -5,14 +5,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Culinary Compass</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
     <script src="https://kit.fontawesome.com/0ba2ede4c9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -34,27 +32,28 @@
                 <li><a class="about" href="{% url 'myapp:about' %}">About Us</a></li>
             </ul>
         </nav>
-        
+
         <div class="content">
-            
-            <div class="recipe-img">
-                <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
-            </div>
-    
+            <h1 class="recipe-title">{{ recipe.title }}</h1>
+            <!-- Title above the summary paragraph -->
             <div class="recipe-information">
-                <h1>{{ recipe.title }}</h1>
-                <p class="description" style="max-width: 800px">{{ recipe.summary | striptags }}</p>
-               
-                <div class="recipe-prep-time">
-                    <h3>Preperation Time</h3>
-                    <ul>
-                        <li><span>Total:</span> Approximately {{ recipe.readyInMinutes }} minutes</li>
-                        <li><span>Preperation:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
-                        <li><span>Cooing:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
-                    </ul>
+                <div class="recipe-summary">
+                    <p class="description">{{ recipe.summary | striptags }}</p>
                 </div>
+                <hr style="border-color: #ff7800;">
             </div>
-    
+        
+            <!-- Rest of the content -->
+        
+            <div class="recipe-prep-time">
+                <h3>Preparation Time</h3>
+                <ul>
+                    <li><span>Total:</span> Approximately {{ recipe.readyInMinutes }} minutes</li>
+                    <li><span>Preparation:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
+                    <li><span>Cooking:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
+                </ul>
+            </div>
+        
             <div class="recipe-step">
                 <h2>Ingredients</h2>
                 <ul class="ingredients">
@@ -63,21 +62,54 @@
                     {% endfor %}
                 </ul>
             </div>
-        </div>       
+        
+            <hr>
+        
+            <div class="recipe-step">
+                <hr style="border-color: #ff7800;">
+                <h2>Instructions</h2>
+                <div class="instructions">
+                    <div class="items">
+                        {{ recipe.instructions|add_newlines|fix_decimal_five|safe }}
+                    </div>
+                </div>
+            </div>
+        
+        
+            {% if recipe.nutrition and recipe.nutrition.nutrients %}
+            <div class="nutrition-info">
+                <hr style="border-color: #ff7800;">
+                <h2>Nutrition Information</h2>
+                <div class="nutrition-details">
+                    {% for nutrient in recipe.nutrition.nutrients %}
+                        {% if nutrient.name|is_essential_nutrient %}
+                        <div class="nutrition-item">
+                            <span class="nutrient-name">{{ nutrient.name }}</span>
+                            <span class="nutrient-amount">{{ nutrient.amount }} {{ nutrient.unit }}</span>
+                            <span class="nutrient-daily-needs">{{ nutrient.percentOfDailyNeeds }}%</span>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% else %}
+            <p>No nutrition information available.</p>
+            {% endif %}
         </div>
+        
     </div>
 </body>
 </html>
-<!--This will be the makshift css file for the background image rendering for the project-->
-    <style>
-        .container {
-            width: 100%;
-            min-height: 100vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 10px 8%;
-            background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{% static "images/Header.jpg" %}');
-        }
-    </style>
-</html>
+
+<!-- This will be the makeshift CSS file for the background image rendering for the project -->
+<style>
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 10px 8%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{% static "images/details.jpg" %}');
+    }
+</style>

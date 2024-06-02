@@ -52,6 +52,8 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     -webkit-text-stroke: 3px #ff7800;
     position: absolute;
     left:295px;

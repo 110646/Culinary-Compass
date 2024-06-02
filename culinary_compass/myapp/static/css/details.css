@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -29,15 +29,11 @@ nav ul {
     width: 100%;
     text-align: right;
     padding-right: 60px;
-    
 }
-
 nav ul li {
     display: inline-block;
     margin: 10px 20px;
-
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -45,64 +41,132 @@ nav ul li a {
     font-weight: 500;
     font-size: 16px;
 }
-
 .content {
-    margin-top: 14%;
-    color: #fff;
-    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.content h1 {
-    font-size: 50px;
-    font-weight: 600;
+.recipe-title {
+    font-size: 6em;
+    color: #ff7800;
+    margin-top: 20px;
     margin-bottom: 40px;
-
+    text-transform: uppercase;
 }
-.content p1{
-    font-size: 18px;
-}
-.content form{
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 30px;
-
-}
-.content form input{
-    border: 0;
-    outline: 0;
-    width: 100%;
-    font-size: 16px;
-    padding-left: 10px;
-}
-.btn{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    background: #ff7800;
+.description {
+    font-size: 1.5em;
     color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 10px 30px;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+    margin: 20px 0;
+    width: 100%;
+}
+.recipe-summary {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.recipe-summary .description {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 auto;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ff7800;
+    margin: 20px 0;
+
+}
+.recipe-prep-time {
+    width: calc(50% - 20px); /* Adjust as needed */
+    margin-right: 20px;
+}
+.recipe-prep-time h3 {
+    font-size: 2.5em;
+    color: #ff7800;
+    margin-bottom: 10px;
+}
+.recipe-prep-time ul {
+    list-style: none;
+    padding: 0;
+}
+.recipe-prep-time li {
+    font-size: 1.2em;
+    color: #fff;
+}
+.recipe-step {
+    margin: 20px 0;
+}
+.recipe-step h2 {
+    font-size: 2.5em;
+    color: #ff7800;
+    margin: 20px 0;
+}
+.recipe-step ul {
+    list-style: none;
+    padding: 0;
+}
+.recipe-step li {
+    font-size: 1.2em;
+    color: #fff;
+}
+.instructions .items {
+    font-size: 1.2em;
+    color: #fff;
+}
+.nutrition-info {
+    margin-top: 30px;
+    width: 100%;
+}
+.nutrition-info h2 {
+    font-size: 2.5em;
+    color: #ff7800;
+    margin-bottom: 10px;
+}
+.nutrition-info p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+/* Existing CSS styles */
+
+/* Updated styles for nutrition information */
+.nutrition-details {
+    margin-top: 20px;
+    text-align: center;
+}
+.nutrition-item {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nutrient-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff;
+    flex: 2;
+    text-align: left;
+    padding-left: 10px;
+}
+.nutrient-amount, .nutrient-daily-needs {
+    flex: 1;
+    font-size: 1.1em;
+    color: #fff;
+    text-align: right;
+    padding-right: 10px;
+}
+.nutrient-daily-needs {
+    font-size: 1em;
+}
 
-}
-.btn:hover, .btn:focus, .btn:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-}
 
 @media only screen and (max-width: 1172px) {
 
