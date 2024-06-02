@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -29,15 +29,11 @@ nav ul {
     width: 100%;
     text-align: right;
     padding-right: 60px;
-    
 }
-
 nav ul li {
     display: inline-block;
     margin: 10px 20px;
-
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -45,64 +41,112 @@ nav ul li a {
     font-weight: 500;
     font-size: 16px;
 }
-
 .content {
-    margin-top: 14%;
-    color: #fff;
-    max-width: 1400px;
-}
-.content h1 {
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 40px;
-
-}
-.content p1{
-    font-size: 18px;
-}
-.content form{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    background: #fff;
-    border-radius: 5px;
-    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.recipe-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    color: #ff7800;
+    margin-top: 20px;
+}
+.description {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 20px 0;
+    max-width: 800px;
+}
+.recipe-prep-time {
+    margin: 20px 0;
+}
+.recipe-prep-time h3 {
+    font-size: 1.8em;
+    color: #ff7800;
+}
+.recipe-prep-time ul {
+    list-style: none;
+    padding: 0;
+}
+.recipe-prep-time li {
+    font-size: 1.2em;
+    color: #fff;
+}
+.recipe-step {
+    margin: 20px 0;
+}
+.recipe-step h2 {
+    font-size: 2.5em;
+    color: #ff7800;
+    margin: 20px 0;
+}
+.recipe-step ul {
+    list-style: none;
+    padding: 0;
+}
+.recipe-step li {
+    font-size: 1.2em;
+    color: #fff;
+}
+.instructions .items {
+    font-size: 1.2em;
+    color: #fff;
+}
+.nutrition-info {
     margin-top: 30px;
-
-}
-.content form input{
-    border: 0;
-    outline: 0;
     width: 100%;
-    font-size: 16px;
-    padding-left: 10px;
 }
-.btn{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    background: #ff7800;
+.nutrition-info h2 {
+    font-size: 2.5em;
+    color: #ff7800;
+    margin-bottom: 10px;
+}
+.nutrition-info p {
     color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 10px 30px;
-    text-decoration: none;
-    cursor: pointer;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.nutrition-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nutrition-item {
+    width: 25%;
+    background-color: rgb(255, 119, 0);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: box-shadow, transform;
     transition-property: box-shadow, transform;
-
 }
-.btn:hover, .btn:focus, .btn:active{
+.nutrition-item:hover, .nutrition-item:focus, .nutrition-item:active {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
+.nutrition-item span {
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+.nutrient-name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.nutrient-amount {
+    font-size: 1.1em;
+}
+.nutrient-daily-needs {
+    font-size: 1em;
+}
+
 
 @media only screen and (max-width: 1172px) {
 

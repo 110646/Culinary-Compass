@@ -14,7 +14,13 @@ def add_newlines(value):
     if not isinstance(value, str):
         return value
     # Split the text at each period followed by a space, then join with <br>
-    return value.replace('.', '.<br>')
+    return value.replace('.', '. ')
+
+@register.filter
+def fix_decimal_five(value):
+    if not isinstance(value, str):
+        return value
+    return value.replace('. 5', '.5')
 
 @register.filter
 def is_essential_nutrient(nutrient_name):
