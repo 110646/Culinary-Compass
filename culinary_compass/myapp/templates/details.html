@@ -35,8 +35,16 @@
 
         <div class="content">
             <h1 class="recipe-title">{{ recipe.title }}</h1>
-            <p class="description">{{ recipe.summary | striptags }}</p>
-
+            <!-- Title above the summary paragraph -->
+            <div class="recipe-information">
+                <div class="recipe-summary">
+                    <p class="description">{{ recipe.summary | striptags }}</p>
+                </div>
+                <hr style="border-color: #ff7800;">
+            </div>
+        
+            <!-- Rest of the content -->
+        
             <div class="recipe-prep-time">
                 <h3>Preparation Time</h3>
                 <ul>
@@ -45,7 +53,7 @@
                     <li><span>Cooking:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
                 </ul>
             </div>
-
+        
             <div class="recipe-step">
                 <h2>Ingredients</h2>
                 <ul class="ingredients">
@@ -54,10 +62,11 @@
                     {% endfor %}
                 </ul>
             </div>
-
+        
             <hr>
-
+        
             <div class="recipe-step">
+                <hr style="border-color: #ff7800;">
                 <h2>Instructions</h2>
                 <div class="instructions">
                     <div class="items">
@@ -65,11 +74,11 @@
                     </div>
                 </div>
             </div>
-
-            <hr>
-
+        
+        
             {% if recipe.nutrition and recipe.nutrition.nutrients %}
             <div class="nutrition-info">
+                <hr style="border-color: #ff7800;">
                 <h2>Nutrition Information</h2>
                 <div class="nutrition-details">
                     {% for nutrient in recipe.nutrition.nutrients %}
@@ -87,6 +96,7 @@
             <p>No nutrition information available.</p>
             {% endif %}
         </div>
+        
     </div>
 </body>
 </html>

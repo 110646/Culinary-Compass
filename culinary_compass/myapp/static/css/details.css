@@ -49,23 +49,43 @@ nav ul li a {
     text-align: center;
 }
 .recipe-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 4em;
+    font-size: 6em;
     color: #ff7800;
     margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 .description {
     font-size: 1.5em;
     color: #fff;
     margin: 20px 0;
-    max-width: 800px;
+    width: 100%;
+}
+.recipe-summary {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.recipe-summary .description {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 auto;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ff7800;
+    margin: 20px 0;
+
 }
 .recipe-prep-time {
-    margin: 20px 0;
+    width: calc(50% - 20px); /* Adjust as needed */
+    margin-right: 20px;
 }
 .recipe-prep-time h3 {
-    font-size: 1.8em;
+    font-size: 2.5em;
     color: #ff7800;
+    margin-bottom: 10px;
 }
 .recipe-prep-time ul {
     list-style: none;
@@ -109,39 +129,39 @@ nav ul li a {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
+/* Existing CSS styles */
+
+/* Updated styles for nutrition information */
 .nutrition-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
 }
 .nutrition-item {
-    width: 25%;
-    background-color: rgb(255, 119, 0);
     margin: 10px;
-    padding: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
-}
-.nutrition-item:hover, .nutrition-item:focus, .nutrition-item:active {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-.nutrition-item span {
-    display: block;
-    color: #fff;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .nutrient-name {
     font-weight: bold;
     font-size: 1.2em;
+    color: #fff;
+    flex: 2;
+    text-align: left;
+    padding-left: 10px;
 }
-.nutrient-amount {
+.nutrient-amount, .nutrient-daily-needs {
+    flex: 1;
     font-size: 1.1em;
+    color: #fff;
+    text-align: right;
+    padding-right: 10px;
 }
 .nutrient-daily-needs {
     font-size: 1em;
