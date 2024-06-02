@@ -46,14 +46,15 @@ nav ul li a {
 }
 
 h1 {
-    font-size: 210px;
+    font-size: 200px;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    font-weight:bold;
     text-transform: uppercase;
     text-align: center;
     color: transparent;
     -webkit-text-stroke: 3px #ff7800;
     position: absolute;
-    font-family: Geneva, Tahoma, Verdana, sans-serif;
-    left:160px;
+    left:295px;
     display: inline-block;
     z-index: 5;
 }
@@ -65,7 +66,6 @@ h1::before {
     height: 100%;
     overflow: hidden;
     color: #ff7800;
-    font-family: Geneva, Tahoma, Verdana, sans-serif;
     z-index: 3;
     -webkit-text-stroke: 3px #ff7800;
     transition: width 1s ease-in-out;
@@ -74,9 +74,24 @@ h1::before {
 
 h1:hover::before {
     width: 100%;
-    font-family: Geneva, Tahoma, Verdana, sans-serif;
 }
 
+h2{
+    font-size: 260px;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color:#ffffff;
+    position: absolute;
+    top: 98px;
+    left: 6px;
+    white-space: nowrap;
+    min-width: 100%;
+    font-weight:bolder;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+}
 .plate .one{
     max-width: 50%;
     position: absolute;
@@ -94,17 +109,17 @@ h1:hover::before {
     font-size: 150px;
     font-weight: 600;
     position: absolute;
-    top: 630px;
+    top: 690px;
     left: 990px;
     color:#fff;
 }
 
 .plate .s1{
     max-width: 800px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     position: absolute;
-    top: 890px;
+    top: 950px;
     left: 1000px;
     color:#fff;
 }
@@ -127,17 +142,17 @@ h1:hover::before {
     font-size: 150px;
     font-weight: 600;
     position: absolute;
-    top: 1340px;
+    top: 1390px;
     left: 80px;
     color:#fff;
 }
 
 .plate .s2{
     max-width: 900px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     position: absolute;
-    top: 1590px;
+    top: 1640px;
     left: 100px;
     color:#fff;
 }
@@ -166,7 +181,7 @@ h1:hover::before {
 
 .plate .s3{
     max-width: 850px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     position: absolute;
     top: 2280px;
@@ -198,7 +213,7 @@ h1:hover::before {
 
 .plate .s4{
     max-width: 900px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     position: absolute;
     top: 2970px;
@@ -230,7 +245,7 @@ h1:hover::before {
 
 .plate .s5{
     max-width: 850px;
-    font-size: 40px;
+    font-size:30px;
     font-weight: 600;
     position: absolute;
     top: 3630px;
@@ -255,18 +270,50 @@ h1:hover::before {
     font-size: 150px;
     font-weight: 600;
     position: absolute;
-    top: 4070px;
+    top: 4090px;
     left: 220px;
     color:#fff;
 }
 
 .plate .s6{
     max-width: 870px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     position: absolute;
-    top: 4320px;
+    top: 4340px;
     left: 100px;
+    color:#fff;
+}
+
+.plate .seven{
+    max-width: 50%;
+    position: absolute;
+    top: 4605px;
+    left: 50px;
+}
+.plate .p7{
+    width: 634px;
+    height: 621.5px;
+    position: absolute;
+    top: 4779px;
+    left: 210px;
+}
+.plate .h7{
+    font-size: 120px;
+    font-weight: 600;
+    position: absolute;
+    top: 4780px;
+    left: 1000px;
+    color:#fff;
+}
+
+.plate .s7{
+    max-width: 850px;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top: 4970px;
+    left: 1005px;
     color:#fff;
 }
 
@@ -308,43 +355,6 @@ body {
     margin: 0 20px;
 }
 
-@keyframes slide{
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%)
-    }
-}
-
-body {
-    background: #fff;
-}
-.logos1{
-    overflow: hidden;
-    padding: 10px 0;
-    background: rgba(255, 255, 255, 0.104);
-    white-space: nowrap;
-    position: relative;
-    top: 4680px;
-    width: 1980px;
-    right: 216px;
-}
-
-
-.logos1:hover .logos-slide1 {
-    animation-play-state: paused;
-}
-
-.logos-slide1{
-    display: inline-block;
-    animation: 15s slide infinite linear;
-}
-
-.logos-slide1 img{
-    height: 39px;
-    margin: 0 20px;
-}
 
 @media only screen and (max-width: 1172px) {
 
