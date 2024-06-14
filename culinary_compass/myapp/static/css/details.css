@@ -4,6 +4,7 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
 nav {
     width: 100%;
     display: flex;
@@ -11,12 +12,15 @@ nav {
     justify-content: space-between;
     padding: 10px 0;
 }
+
 .checkbox {
     display: none;
 }
+
 .checkbtn {
     display: none;
 }
+
 .logo {
     width: 325px;
     cursor: pointer;
@@ -24,16 +28,19 @@ nav {
     -webkit-filter: drop-shadow(0px 0.5px 0.5px #a14b00);
     filter: drop-shadow(0px 0.5px 0.5px #a14b00);
 }
+
 nav ul {
     list-style: none;
     width: 100%;
     text-align: right;
     padding-right: 60px;
 }
+
 nav ul li {
     display: inline-block;
     margin: 10px 20px;
 }
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -41,326 +48,120 @@ nav ul li a {
     font-weight: 500;
     font-size: 16px;
 }
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.recipe-title {
-    font-size: 6em;
-    color: #ff7800;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-.description {
-    font-size: 1.5em;
-    color: #fff;
-    margin: 20px 0;
-    width: 100%;
-}
-.recipe-summary {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.recipe-summary .description {
-    font-size: 1.2em;
-    color: #fff;
-    margin: 0 auto;
-}
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #ff7800;
-    margin: 20px 0;
 
+.stacked-title {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
 }
-.recipe-prep-time {
-    width: calc(50% - 20px); /* Adjust as needed */
+
+.title-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    font-size: 4em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+.title-foreground {
+    color: #ff7800;
+    font-size: 3em;
+}
+
+.recipe-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.recipe-image {
+    flex: 1;
     margin-right: 20px;
 }
-.recipe-prep-time h3 {
-    font-size: 2.5em;
-    color: #ff7800;
-    margin-bottom: 10px;
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
+
+.recipe-summary {
+    flex: 2;
+    font-size: 1.2em;
+    color: #fff;
+    max-width: 600px;
+}
+
+.orange-line {
+    border: 1px solid #ff7800;
+}
+
+.recipe-prep-time h3 {
+    font-size: 1.5em;
+    color: #ff7800;
+}
+
 .recipe-prep-time ul {
     list-style: none;
     padding: 0;
 }
+
 .recipe-prep-time li {
     font-size: 1.2em;
     color: #fff;
 }
-.recipe-step {
-    margin: 20px 0;
-}
+
 .recipe-step h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #ff7800;
     margin: 20px 0;
 }
+
 .recipe-step ul {
     list-style: none;
     padding: 0;
 }
+
 .recipe-step li {
     font-size: 1.2em;
     color: #fff;
 }
+
 .instructions .items {
     font-size: 1.2em;
     color: #fff;
 }
+
 .nutrition-info {
     margin-top: 30px;
-    width: 100%;
 }
-.nutrition-info h2 {
-    font-size: 2.5em;
-    color: #ff7800;
-    margin-bottom: 10px;
-}
-.nutrition-info p {
-    color: #fff;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-/* Existing CSS styles */
 
-/* Updated styles for nutrition information */
-.nutrition-details {
-    margin-top: 20px;
-    text-align: center;
+.nutrition-info h2 {
+    font-size: 2em;
+    color: #ff7800;
+    display: inline-block;
 }
+
+.nutrition-info span {
+    font-size: 0.8em;
+    color: #ff7800;
+}
+
+.nutrition-details {
+    font-size: 1.2em;
+    color: #fff;
+}
+
 .nutrition-item {
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin: 5px 0;
 }
-.nutrient-name {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #fff;
-    flex: 2;
-    text-align: left;
-    padding-left: 10px;
-}
-.nutrient-amount, .nutrient-daily-needs {
-    flex: 1;
-    font-size: 1.1em;
-    color: #fff;
-    text-align: right;
-    padding-right: 10px;
-}
-.nutrient-daily-needs {
-    font-size: 1em;
-}
-
-
-@media only screen and (max-width: 1172px) {
-
-    .content h1 {
-        font-size: 35px;
-    }
-    .content p {
-        font-size: 14px;
-    }
-    nav {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0;
-
-    }
-    .logo {
-        width: 275px;
-        cursor: pointer;
-        float: left;
-    }
-    
-}
-@media only screen and (max-width: 917px) {
-    .checkbtn {
-        display: block;
-        font-size: 30px;
-        color: #fff;
-        position: absolute;
-        top: 10px;
-        right: 0px;
-        line-height: 80px;
-        margin-right: 40px;
-        cursor: pointer;
-    }
-    .content h1 {
-        font-size: 25px;
-    }
-    .content p {
-        font-size: 12px;
-    }
-    .checkbox {
-        display: block;
-        
-    }   
-    #check {
-        display: none;
-    }
-    ul {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 225px;
-        background-color: #ff7800;
-        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.4);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        transition: all .5s;
-
-    }
-
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 10px;
-
-    }
-    nav ul li a {
-        font-size: 16px;
-        font-weight: 400;
-    }
-    nav ul li .top{
-        position: absolute;
-        right: 60px;
-        top: 100px;
-    }
-    nav ul li .tips{
-        position: absolute;
-        right: 67px;
-        top: 150px;
-    }
-    nav ul li .about {
-        position: absolute;
-        right: 82px;
-        top: 200px;
-    }
-    a:hover, a.active{
-        background: none;
-        color: #320000;
-
-    }
-    #check:checked ~ ul{
-        right: 0;
-        margin: auto;
-        width: 225px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    .logo {
-        width: 225px;
-        cursor: pointer;
-        float: left;
-    }
-    .content form input{
-        border: 0;
-        outline: 0;
-        width: 100%;
-        font-size: 10px;
-        padding-left: 10px;
-    }
-    .btn{
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        border: 0;
-        outline: 0;
-        border-radius: 5px;
-        background: #ff7800;
-        color: #fff;
-        font-weight: 500;
-        cursor: pointer;
-        font-size: 10px;
-        padding: 10px 30px;
-        text-decoration: none;
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-property: box-shadow, transform;
-        transition-property: box-shadow, transform;
-
-    }
-    .btn:hover, .btn:focus, .btn:active{
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-    }
-    
-
-}
-
-@media only screen and (max-width: 420px) {
-    .content h1 {
-        font-size: 16px;
-    }
-    .content p {
-        font-size: 8px;
-    }
-    nav ul li a {
-        font-size: 12px;
-        font-weight: 500;
-    }
-    nav ul li .top{
-        position: absolute;
-        right: 75px;
-        top: 100px;
-    }
-    nav ul li .tips{
-        position: absolute;
-        right: 80px;
-        top: 150px;
-    }
-    nav ul li .about {
-        position: absolute;
-        right: 92px;
-        top: 200px;
-    }
-    .checkbtn {
-        display: block;
-        font-size: 20px;
-        color: #fff;
-        position: absolute;
-        top: 10px;
-        right: 0px;
-        line-height: 80px;
-        margin-right: 40px;
-        cursor: pointer;
-    }
-    .logo {
-        width: 160px;
-        cursor: pointer;
-        float: left;
-    }
-    .btn {
-        font-size: 8px;
-    }
-    .content form input{
-        font-size: 8px;
-    }
-}   
- 

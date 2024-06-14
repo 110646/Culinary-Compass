@@ -34,17 +34,22 @@
         </nav>
 
         <div class="content">
-            <h1 class="recipe-title">{{ recipe.title }}</h1>
-            <!-- Title above the summary paragraph -->
             <div class="recipe-information">
-                <div class="recipe-summary">
-                    <p class="description">{{ recipe.summary | striptags }}</p>
+                <div class="stacked-title">
+                    <h1 class="title-background">{{ recipe.title }}</h1>
+                    <h1 class="title-foreground">{{ recipe.title }}</h1>
                 </div>
-                <hr style="border-color: #ff7800;">
+                <div class="recipe-top">
+                    <div class="recipe-image">
+                        <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                    </div>
+                    <div class="recipe-summary">
+                        <p class="description">{{ recipe.summary | striptags }}</p>
+                    </div>
+                </div>
+                <hr class="orange-line">
             </div>
-        
-            <!-- Rest of the content -->
-        
+
             <div class="recipe-prep-time">
                 <h3>Preparation Time</h3>
                 <ul>
@@ -53,7 +58,7 @@
                     <li><span>Cooking:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
                 </ul>
             </div>
-        
+
             <div class="recipe-step">
                 <h2>Ingredients</h2>
                 <ul class="ingredients">
@@ -62,11 +67,10 @@
                     {% endfor %}
                 </ul>
             </div>
-        
+
             <hr>
-        
+
             <div class="recipe-step">
-                <hr style="border-color: #ff7800;">
                 <h2>Instructions</h2>
                 <div class="instructions">
                     <div class="items">
@@ -74,19 +78,19 @@
                     </div>
                 </div>
             </div>
-        
-        
+
+            <hr>
+
             {% if recipe.nutrition and recipe.nutrition.nutrients %}
             <div class="nutrition-info">
-                <hr style="border-color: #ff7800;">
-                <h2>Nutrition Information</h2>
+                <h2>Nutrition Information <span>*per serving</span></h2>
                 <div class="nutrition-details">
                     {% for nutrient in recipe.nutrition.nutrients %}
                         {% if nutrient.name|is_essential_nutrient %}
                         <div class="nutrition-item">
-                            <span class="nutrient-name">{{ nutrient.name }}</span>
+                            <span class="nutrient-name">{{ nutrient.name }}:</span>
                             <span class="nutrient-amount">{{ nutrient.amount }} {{ nutrient.unit }}</span>
-                            <span class="nutrient-daily-needs">{{ nutrient.percentOfDailyNeeds }}%</span>
+                            <span class="nutrient-daily-needs">({{ nutrient.percentOfDailyNeeds }}% DV)</span>
                         </div>
                         {% endif %}
                     {% endfor %}
@@ -96,7 +100,6 @@
             <p>No nutrition information available.</p>
             {% endif %}
         </div>
-        
     </div>
 </body>
 </html>
@@ -110,6 +113,8 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 10px 8%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{% static "images/details.jpg" %}');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{% static "images/details header.jpg" %}');
     }
 </style>
+
+
