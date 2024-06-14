@@ -60,18 +60,20 @@
             </div>
 
             <div class="recipe-step">
-                <h2>Ingredients</h2>
+                <div class="recipe-ingredients">
+                <h2 class="ingredients-title">Ingredients</h2>
                 <ul class="ingredients">
                     {% for ingredient in recipe.extendedIngredients %}
                         <li><span>{{ ingredient.original }}</span></li>
                     {% endfor %}
                 </ul>
+                </div>
             </div>
 
             <hr>
 
             <div class="recipe-step">
-                <h2>Instructions</h2>
+                <h2 class="instructions-title">Instructions</h2>
                 <div class="instructions">
                     <div class="items">
                         {{ recipe.instructions|add_newlines|fix_decimal_five|safe }}
