@@ -4,12 +4,8 @@ from urllib.parse import urlencode
 import requests
 
 def home(request):
-    if request.method == 'GET':
-        query = request.GET.get('query', '')
-        if query:
-            return redirect('myapp:results', query=query)
-        else:
-            return render(request, 'home.html')
+    message = request.GET.get('message', '')
+    return render(request, 'home.html', {'message': message})
 
 def results(request):
     query = request.GET.get('query', '')
@@ -18,10 +14,12 @@ def results(request):
     if response.status_code == 200:
         data = response.json()
         results = data.get('results', [])
+        if not results:  # Check if the results list is empty
+            return redirect(f"/?message=No results found. Please try again.")
         return render(request, 'results.html', {'results': results, 'query': query})
     else:
-        return render(request, 'results.html', {'results': [], 'query': query})
-    
+        return redirect(f"/?message=Error occurred while fetching data")
+
 def details(request):
     recipe_id = request.GET.get('recipe_id', '')
     query = request.GET.get('query', '')  
@@ -40,7 +38,7 @@ def about(request):
     return render(request, 'about.html', {})
 
 def top(request):
-	return render(request, 'top.html', {})
+    return render(request, 'top.html', {})
 
 def tip(request):
-	return render(request, 'tip.html', {})
+    return render(request, 'tip.html', {})

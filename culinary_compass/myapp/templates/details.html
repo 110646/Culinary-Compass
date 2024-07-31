@@ -34,73 +34,33 @@
         </nav>
 
         <div class="content">
-            <div class="recipe-information">
-                <div class="stacked-title">
-                    <h1 class="title-background">{{ recipe.title }}</h1>
-                    <h1 class="title-foreground">{{ recipe.title }}</h1>
-                </div>
-                <div class="recipe-top">
-                    <div class="recipe-image">
-                        <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
-                    </div>
-                    <div class="recipe-summary">
-                        <p class="description">{{ recipe.summary | striptags }}</p>
-                    </div>
-                </div>
-                <hr class="orange-line">
-            </div>
-
-            <div class="recipe-prep-time">
-                <h3>Preparation Time</h3>
-                <ul>
-                    <li><span>Total:</span> Approximately {{ recipe.readyInMinutes }} minutes</li>
-                    <li><span>Preparation:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
-                    <li><span>Cooking:</span> Approximately {{ recipe.readyInMinutes|half }} minutes</li>
-                </ul>
-            </div>
-
-            <div class="recipe-step">
-                <div class="recipe-ingredients">
-                <h2 class="ingredients-title">Ingredients</h2>
-                <ul class="ingredients">
+            <h1>{{ recipe.title }}</h1>
+            <p>{{ recipe.summary | striptags }}</p>
+            <p class="time">Total Preperation Time: {{ recipe.readyInMinutes }} minutes</p>
+            <p class="vegetarian">Vegetarian: {{ recipe.vegetarian }}</p>
+            <div class="i">
+                <p class="ingredients-title">Ingredients</p>
+                <p class="ingredients">
                     {% for ingredient in recipe.extendedIngredients %}
-                        <li><span>{{ ingredient.original }}</span></li>
+                        <li>{{ ingredient.original }}</li>
                     {% endfor %}
-                </ul>
-                </div>
+                </p>
             </div>
-
-            <hr>
-
-            <div class="recipe-step">
-                <h2 class="instructions-title">Instructions</h2>
-                <div class="instructions">
-                    <div class="items">
-                        {{ recipe.instructions|add_newlines|fix_decimal_five|safe }}
-                    </div>
-                </div>
-            </div>
-
-            <hr>
-
-            {% if recipe.nutrition and recipe.nutrition.nutrients %}
-            <div class="nutrition-info">
-                <h2>Nutrition Information <span>*per serving</span></h2>
-                <div class="nutrition-details">
+            <p class="directions-title">Directions</p>
+            <p class="steps">{{ recipe.instructions|add_newlines|fix_decimal_five|safe }}</p>
+            <div class="nutrition">
+                <p class="nutrition-title">Nutrition</p>
+                {% if recipe.nutrition and recipe.nutrition.nutrients %}
                     {% for nutrient in recipe.nutrition.nutrients %}
                         {% if nutrient.name|is_essential_nutrient %}
-                        <div class="nutrition-item">
-                            <span class="nutrient-name">{{ nutrient.name }}:</span>
-                            <span class="nutrient-amount">{{ nutrient.amount }} {{ nutrient.unit }}</span>
-                            <span class="nutrient-daily-needs">({{ nutrient.percentOfDailyNeeds }}% DV)</span>
-                        </div>
+                        <span class="nutrient-name">{{ nutrient.name }}:</span>
+                                <span class="nutrient-amount">{{ nutrient.amount }} {{ nutrient.unit }}</span>
+                                <span class="nutrient-daily-needs">({{ nutrient.percentOfDailyNeeds }}% DV)</span>
                         {% endif %}
                     {% endfor %}
-                </div>
+                {% endif %}
             </div>
-            {% else %}
-            <p>No nutrition information available.</p>
-            {% endif %}
+            <img class="image" src="{{ recipe.image }}" alt="{{ recipe.title }}">
         </div>
     </div>
 </body>

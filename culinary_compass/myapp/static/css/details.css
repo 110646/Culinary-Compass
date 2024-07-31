@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    color: #fff;
 }
 
 nav {
@@ -49,138 +50,76 @@ nav ul li a {
     font-size: 16px;
 }
 
-.stacked-title {
-    position: relative;
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1;
+.content {
+    margin-top: 4%;
+    color: #fff;
+    max-width: 900px;
+}
+.content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.content p1{
+    font-size: 18px;
 }
 
-.title-background {
+.time{
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: 800;
+    color: #ff7800;
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    z-index: -1;
-    font-size: 8em;
-    font-weight:bold;
-    white-space: nowrap;
-    overflow: hidden;
-    opacity: 0.2;
-    text-align: center;
+    right: 420px;
+    top: 900px;
 }
-
-.title-foreground {
-    position: relative;
-    color: #ff7800;
-    font-size: 3em;
-    margin-bottom: 60px;
-}
-
-.recipe-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.recipe-image {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.recipe-image img {
+.vegetarian {
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: 800;
     position: absolute;
-    left: 320px;
-    top: 270px;
-    width: 32%;
-    height: auto;
-    -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.recipe-summary {
-    flex: 2;
-    font-size: 1.2em;
-    color: #fff;
-    max-width: 600px;
-    margin-bottom: 60px;
-    position: relative;
-    left: -140px ;
-}
-
-.orange-line {
-    border: 1px solid #ff7800;
-}
-
-.recipe-prep-time h3 {
-    font-size: 1.5em;
+    right: 200px;
+    top: 900px;
     color: #ff7800;
-    text-align: center;
 }
-
-.recipe-prep-time ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    line-height: 1.8;
-}
-
-.recipe-prep-time li {
-    font-size: 1.2em;
-    color: #fff;
-    text-align: center;
-    line-height: 1.8;
-}
-.recipe-ingredients{
-    align-items: center;
-    text-align: center;
-}
-
-.recipe-step h2 {
-    font-size: 2em;
+.ingredients-title{
+    font-size: 24px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    font-weight: 600;
     color: #ff7800;
-    margin: 20px 0;
 }
-
-.recipe-step ul {
-    list-style: none;
-    padding: 0;
+.i{
+    position: absolute;
+    right: 350px;
+    top: 700px;
 }
-
-.recipe-step li {
-    font-size: 1.2em;
-    color: #fff;
-}
-
-.instructions .items {
-    font-size: 1.2em;
-    color: #fff;
-}
-
-.nutrition-info {
+.steps {
     margin-top: 30px;
 }
-
-.nutrition-info h2 {
-    font-size: 2em;
-    color: #ff7800;
-    display: inline-block;
-}
-
-.nutrition-info span {
-    font-size: 1.2em;
+.directions-title{
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
     color: #ff7800;
 }
+.nutrition-title{
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #ff7800;
+}
+.nutrition{
+    margin-bottom: 200px;
+}
+.image{
+    position: absolute;
+    top: 220px;
+    right: 150px;
+    width: 600px;
 
-.nutrition-details {
-    font-size: 1.2em;
-    color: #fff;
 }
 
-.nutrition-item {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
-}
+
