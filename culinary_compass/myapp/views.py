@@ -18,7 +18,7 @@ def results(request):
             return redirect(f"/?message=No results found. Please try again.")
         return render(request, 'results.html', {'results': results, 'query': query})
     else:
-        return redirect(f"/?message=Error occurred while fetching data")
+        return redirect(f"/?message=The number of searches for this site has exceeded. Please try again later.")
 
 def details(request):
     recipe_id = request.GET.get('recipe_id', '')
@@ -30,9 +30,12 @@ def details(request):
     response = requests.get(url, params=params)
     if response.status_code == 200:
         recipe_data = response.json()
+        if not recipe_data:
+            return render(request, 'home.html')
         return render(request, 'details.html', {'recipe': recipe_data, 'query': query})  
     else:
-        return render(request, 'details.html', {'recipe': None, 'query': query})  
+        return render(request, 'home.html')  
+        
     
 def about(request):
     return render(request, 'about.html', {})
