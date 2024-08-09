@@ -345,7 +345,6 @@ h1:hover::before {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    
 }
 .marquee {
     position: absolute;
@@ -420,6 +419,18 @@ h1:hover::before {
         cursor: pointer;
         float: left;
     }
+    .marquee-w {
+        position: relative;
+        font-family: Geneva, Tahoma, Verdana, sans-serif;
+        display: block;
+        width: 2000px;
+        height: 210px;
+        top: -68px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+    
     
 }
 @media only screen and (max-width: 917px) {
@@ -439,7 +450,7 @@ h1:hover::before {
     }
     h1 {
         font-size: 90px;
-        -webkit-text-stroke: 2px #fff;
+        -webkit-text-stroke: 2px #ff7800;
     }
     .content p1 {
         font-size: 12px;
@@ -546,10 +557,46 @@ h1:hover::before {
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
-    
+    .marquee span {
+        display: inline-block;
+        padding-left: 100%;
+        font-family: Geneva, Tahoma, Verdana, sans-serif;
+        text-align: center;
+        color: #fff;
+        white-space: nowrap;
+        min-width: 100%;
+        font-weight: 700;
+        height: 100%;
+        font-size: 200px;
+        text-transform: uppercase;
+        z-index: 1;
+        opacity: 0.2;
+        line-height: 0.8;
+        animation: marquee 10s linear infinite;
+        padding-right: 2rem;
+    }
+    .marquee2 span {
+        animation-delay: 5s;
+    }
+    .marquee-w {
+        position: relative;
+        font-family: Geneva, Tahoma, Verdana, sans-serif;
+        display: block;
+        width: 2000px;
+        height: 210px;
+        top: -35px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
 
 }
-
+@media only screen and (max-width: 650px) {
+    .off-info{
+        display: none;
+    }
+}
+    
 @media only screen and (max-width: 420px) {
     .content h1 {
         font-size: 16px;
@@ -563,7 +610,7 @@ h1:hover::before {
     }
     h1 {
         font-size: 50px;
-        -webkit-text-stroke: 1px #fff;
+        -webkit-text-stroke: 1px #ff7800;
 
     }
     nav ul li a {
@@ -610,14 +657,59 @@ h1:hover::before {
     .itemimg {
         width: 75%;
         display: block;
-        height: 100px; /* Adjust the height as needed */
+        height: 80px; /* Adjust the height as needed */
+        width: 80px;
         object-fit: cover; /* Crop the image to cover the specified dimensions */
         border-radius: 50%;
         zoom: 150%;
         position: relative;
-        right: -22px;
-    
+        top: -5px;
+        right: 5px;
+        
     }
+    .product-img {
+        width: 120px; /* Reduce width for smaller screens */
+        height: 120px; /* Reduce height accordingly */
+        margin: 0 auto; /* Center the image */
+        border-radius: 50%; /* Keep the circular shape */
+        padding: 0.5rem; /* Adjust padding to fit the background snugly */
+        background: var(--carribean-green); /* Orange background */
+    }
+    
+    .marquee span {
+        display: inline-block;
+        padding-left: 100%;
+        font-family: Geneva, Tahoma, Verdana, sans-serif;
+        text-align: center;
+        color: #fff;
+        white-space: nowrap;
+        min-width: 100%;
+        font-weight: 700;
+        height: 100%;
+        font-size: 120px;
+        text-transform: uppercase;
+        z-index: 1;
+        opacity: 0.2;
+        line-height: 0.8;
+        animation: marquee 10s linear infinite;
+        padding-right: 2rem;
+    }
+    .marquee2 span {
+        animation-delay: 5s;
+    }
+    .marquee-w {
+        position: relative;
+        font-family: Geneva, Tahoma, Verdana, sans-serif;
+        display: block;
+        width: 2000px;
+        height: 210px;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
+
 }   
  
 
