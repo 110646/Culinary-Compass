@@ -125,6 +125,13 @@ nav ul li a {
     width: 33%;
 
 }
+@media only screen and (max-width: 1670px){
+.i{
+    position: absolute;
+    left: 700px;
+    top: 700px;
+}
+}
 @media only screen and (max-width: 1172px) {
 
     .content h1 {
