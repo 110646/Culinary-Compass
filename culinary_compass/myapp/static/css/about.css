@@ -1838,12 +1838,12 @@ nav ul li a {
     
     .flex .description{
         position:absolute;
-        font-size: 82px;
+        font-size: 118px;
         padding:0;
         text-align: left;
         top: 140px;
         left: 65px;
-        line-height: 55pt;
+        line-height: 75pt;
         text-shadow: 7px 5px 5px #000000;
     }
     
@@ -1856,66 +1856,66 @@ nav ul li a {
    
      .blank .p1{
         font-family: "Playfair Display", serif;
-        font-size: 5.7px;
+        font-size: 8px;
         line-height: 1.8;
-        max-width: 110px;
+        max-width: 155px;
         font-weight: bold;
         position: absolute;
-        top: 320px;
-        left: 235px;
+        top: 397px;
+        left: 307px;
         z-index: 5;
      }
    
     .about-us img{
         display:block;
-        max-width: 180px;
+        max-width: 260px;
         height: auto;
         margin:0 auto;
         margin-top: 330px;
         position: absolute;
-        top: -130px;
-        left: 155px;
+        top: -105px;
+        left: 185px;
     }
     .corn img{
         display:block;
-        max-width: 35px;
+        max-width: 50px;
         height: auto;
         margin:0 auto;
         margin-top: 6px;
         filter: invert(43%) sepia(80%) saturate(1581%) hue-rotate(2deg) brightness(105%) contrast(104%);
         float:right;
         position: absolute;
-        top: 180px;
-        left: 320px;
+        top: 200px;
+        left: 420px;
     }
     .us img{
         display:block;
-        max-width: 160px;
+        max-width: 230px;
         height: auto;
         margin:0 auto;
         margin-top: 330px;
         position: absolute;
-        top: -20px;
+        top: 45px;
         left: 68px;
         box-shadow: 5px 5px 5px rgb(21, 27, 29);
     }
     .one img{
         display:block;
-        max-width: 120px;
+        max-width: 185px;
         height: auto;
         margin:0 auto;
         margin-top: 330px;
         position: absolute;
-        top: 100px;
+        top: 215px;
         left: 68px;
     }
     .one .team{
-        font-size: 29px;
+        font-size: 46px;
         line-height: 1.7;
         font-weight:bold;
         position: absolute;
-        top: 498px;
-        left: 117px;
+        top: 648px;
+        left: 133px;
         color: #fff;
         transform:rotate(-90deg);
     }
@@ -1934,7 +1934,7 @@ nav ul li a {
         display: flex;
         position: relative;
         left: -282px;
-        top: -604px;
+        top: -544px;
         align-items: center;
         border: 0;
         outline: 0;
@@ -1944,8 +1944,8 @@ nav ul li a {
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
         cursor: pointer;
-        font-size: 4px;
-        padding: 1px 2px;
+        font-size: 5px;
+        padding: 3px 5px;
         text-decoration: none;
         cursor: pointer;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
@@ -1964,8 +1964,8 @@ nav ul li a {
     .btn1{
         display: flex;
         position: relative;
-        left: -245px;
-        top: -612px;
+        left: -229px;
+        top: -558px;
         align-items: center;
         border: 0;
         outline: 0;
@@ -1975,8 +1975,8 @@ nav ul li a {
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
         cursor: pointer;
-        font-size: 4px;
-        padding: 1px 2px;
+        font-size: 5px;
+        padding: 3px 5px;
         text-decoration: none;
         cursor: pointer;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
@@ -1995,7 +1995,7 @@ nav ul li a {
 
 
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 448px) {
     .content h1 {
         font-size: 16px;
     }
@@ -2046,7 +2046,7 @@ nav ul li a {
     
     .flex .description{
         position:absolute;
-        font-size: 82px;
+        font-size: 88px;
         padding:0;
         text-align: left;
         top: 140px;
