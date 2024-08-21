@@ -42,18 +42,24 @@
                 <p class="vegetarian">Vegetarian: {{ recipe.vegetarian }}</p>
             </div>
             <p>{{ recipe.summary | striptags }}</p>
-            <div class="i">
-                <p class="ingredients-title">Ingredients</p>
-                <p class="ingredients">
-                    {% for ingredient in recipe.extendedIngredients %}
-                        <li>{{ ingredient.original }}</li>
-                    {% endfor %}
-                </p>
+            <div class="righthand">
+                <img class="image" src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                <div class="i">
+                    <p class="ingredients-title">Ingredients</p>
+                    <p class="ingredients">
+                        {% for ingredient in recipe.extendedIngredients %}
+                            <li>{{ ingredient.original }}</li>
+                        {% endfor %}
+                    </p>
+                </div>
             </div>
             <p class="directions-title">Directions</p>
-            <p class="steps">{{ recipe.instructions|add_newlines|fix_decimal_five|safe }}</p>
+            <div class="dfont">
+                <p class="steps">{{ recipe.instructions|add_newlines|fix_decimal_five|safe }}</p>
+            </div>
             <div class="nutrition">
                 <p class="nutrition-title">Nutrition</p>
+            <div class="n">
                 {% if recipe.nutrition and recipe.nutrition.nutrients %}
                     {% for nutrient in recipe.nutrition.nutrients %}
                         {% if nutrient.name|is_essential_nutrient %}
@@ -64,7 +70,7 @@
                     {% endfor %}
                 {% endif %}
             </div>
-            <img class="image" src="{{ recipe.image }}" alt="{{ recipe.title }}">
+            </div>
         </div>
     </div>
 </body>
