@@ -56,7 +56,7 @@ h1 {
     font-weight: bold;
     -webkit-text-stroke: 3px #ff7800;
     position: absolute;
-    left: 295px;
+    left: 332px;
     top: 168px;
     display: inline-block;
     z-index: 5;
@@ -78,22 +78,68 @@ h1::before {
 h1:hover::before {
     width: 100%;
 }
-
-h2{
-    font-size: 260px;
-    font-family: Geneva, Tahoma, Verdana, sans-serif;
-    text-transform: uppercase;
+h3{
+    font-size: 28px;
+    font-weight: 500;
+    color:#fff;
     text-align: center;
-    color:#ffffff;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    opacity: 0.8;
+    max-width: 1800px;
+    position: relative;
+    
+
+}
+.marquee-w {
+    position: relative;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    display: block;
+    width: 2000px;
+    height: 210px;
+    top: 122px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.marquee {
     position: absolute;
-    top: 98px;
-    left: -4px;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    text-align: center;
+    color: #fff;
     white-space: nowrap;
     min-width: 100%;
-    font-weight:bolder;
+    font-weight: 700;
     height: 100%;
+    font-size: 250px;
+    text-transform: uppercase;
     z-index: 1;
-    opacity: 0.1;
+    opacity: 0.2;
+    line-height: 0.8;
+    animation: marquee 10s linear infinite;
+    padding-right: 2rem;
+}
+.marquee2 span {
+    animation-delay: 5s;
+}
+@keyframes marquee {
+    0% {
+        transform: translate(-100%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 .plate .one{
     max-width: 50%;
@@ -114,7 +160,7 @@ h2{
     position: absolute;
     top: 690px;
     left: 990px;
-    color:#fff;
+    color:#ff7800;
 }
 
 .plate .s1{
@@ -125,6 +171,7 @@ h2{
     top: 950px;
     left: 1000px;
     color:#fff;
+    opacity: 0.8;
 }
 
 .plate .two{
@@ -147,7 +194,7 @@ h2{
     position: absolute;
     top: 1390px;
     left: 80px;
-    color:#fff;
+    color:#ff7800;
 }
 
 .plate .s2{
@@ -158,6 +205,7 @@ h2{
     top: 1640px;
     left: 100px;
     color:#fff;
+    opacity: 0.8;
 }
 
 .plate .three{
@@ -179,7 +227,7 @@ h2{
     position: absolute;
     top: 2080px;
     left: 1020px;
-    color:#fff;
+    color:#ff7800;
 }
 
 .plate .s3{
@@ -190,6 +238,7 @@ h2{
     top: 2280px;
     left: 1005px;
     color:#fff;
+    opacity: 0.8;
 }
 
 .plate .four{
@@ -211,7 +260,7 @@ h2{
     position: absolute;
     top: 2720px;
     left: 240px;
-    color:#fff;
+    color:#ff7800;
 }
 
 .plate .s4{
@@ -222,6 +271,7 @@ h2{
     top: 2970px;
     left: 100px;
     color:#fff;
+    opacity: 0.8;
 }
 
 .plate .five{
@@ -243,7 +293,7 @@ h2{
     position: absolute;
     top: 3430px;
     left: 1115px;
-    color:#fff;
+    color:#ff7800;
 }
 
 .plate .s5{
@@ -254,6 +304,7 @@ h2{
     top: 3630px;
     left: 1005px;
     color:#fff;
+    opacity: 0.8;
 }
 
 .plate .six{
@@ -275,7 +326,7 @@ h2{
     position: absolute;
     top: 4090px;
     left: 220px;
-    color:#fff;
+    color:#ff7800;
 }
 
 .plate .s6{
@@ -286,6 +337,7 @@ h2{
     top: 4340px;
     left: 100px;
     color:#fff;
+    opacity: 0.8;
 }
 
 .plate .seven{
@@ -307,7 +359,7 @@ h2{
     position: absolute;
     top: 4780px;
     left: 1000px;
-    color:#fff;
+    color:#ff7800;
 }
 
 .plate .s7{
@@ -318,6 +370,7 @@ h2{
     top: 4970px;
     left: 1005px;
     color:#fff;
+    opacity: 0.8;
 }
 
 @keyframes slide{
@@ -333,6 +386,7 @@ body {
     background: #fff;
 }
 .logos{
+    display: none;
     overflow: hidden;
     padding: 10px 0;
     background: rgba(255, 255, 255, 0.104);

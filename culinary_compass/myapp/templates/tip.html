@@ -32,7 +32,6 @@
             </ul>
         </nav>
         <h1>Kitchen Tips</h1>
-        <h2>Kitchen Tips</h2>
         <div class="logos">
             <div class="logos-slide">
                 <img src="{% static 'images/Culinary Compass Logo.png' %}" />
@@ -64,6 +63,19 @@
                 <img src="{% static 'images/kitchen tips.png' %}" />
                 <img src="{% static 'images/knife.png' %}" />
             </div>
+        </div>
+        <h2 data-text="{{ query }}"></h2> 
+                <div class="marquee-w">
+                    <div class="marquee">
+                        <span>KITCHEN TIPS&nbsp;&nbsp;&nbsp;</span>
+                    </div>
+                    <div class="marquee marquee2">
+                        <span>KITCHEN TIPS&nbsp;&nbsp;&nbsp;</span>
+                    </div>
+                </div> 
+        <div class="description">
+            <h3>
+                Welcome to our Kitchen Tips page! Here, we've curated a collection of practical and insightful tips to elevate your culinary experience. Whether you're looking for ways to simplify meal prep, improve your cooking techniques, or make the most out of your kitchen tools, our expert tips are designed to help you cook with confidence and creativity. Dive in and discover the secrets to becoming a more efficient and inspired home chef!</h3>
         </div>
         <div class="plate">
             <img class="one" src="{% static 'images/plate.png' %}" />
@@ -122,7 +134,7 @@
             background-repeat: no-repeat;
             background-position: center;
             padding: 10px 8%;
-            background-image: linear-gradient( rgba(0, 0, 0, 0.633), rgba(0, 0, 0, 0.633) ), url('{% static "images/resultsbackground.jpg" %}');
+            background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('{% static "images/resultsbackground.jpg" %}');          
         }
     </style>
 </html>
