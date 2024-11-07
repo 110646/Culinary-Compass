@@ -104,6 +104,29 @@ nav ul li a {
     transform: scale(1.05);
 }
 
+.filterable_cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap to the next line */
+    margin-top: 25px;
+}
+.card {
+    flex: 0 0 calc(18% - 20px); /* Set the width of each card */
+    margin: 0 10px 20px; /* Add margin around each card */
+    padding: 3px;
+    
+}
+.image {
+    width: 100%;
+    height: 180px; /* Adjust the height as needed */
+    object-fit: cover; /* Crop the image to cover the specified dimensions */
+    border-radius: 50%;
+    zoom: 150%;
+}
+.card_body{
+    padding: 15px 20px 20px;
+
+}
+
 
 @media only screen and (max-width: 1172px) {
 
