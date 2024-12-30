@@ -233,9 +233,9 @@ nav ul li a {
     margin-bottom: 26px;
     line-height: 1.7;
     font-weight:bold;
-    position: absolute;
-    top: 1860px;
-    left: 505px;
+    position: relative;
+    top: -912px;
+    left: -7px;
     color: #fff;
     transform:rotate(-90deg);
 }
