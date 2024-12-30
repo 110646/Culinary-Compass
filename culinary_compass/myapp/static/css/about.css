@@ -4,6 +4,9 @@
     font-family: "Encode Sans Semi Expanded", sans-serif;
     box-sizing: border-box;
 }
+container {
+    margin-bottom: 20px;
+}
 nav {
     width: 100%;
     display: flex;
@@ -203,6 +206,7 @@ nav ul li a {
     height: auto;
     margin:0 auto;
     margin-top: 330px;
+    
     position: absolute;
     top: 640px;
     left: 270px;
