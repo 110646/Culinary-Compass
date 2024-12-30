@@ -377,7 +377,7 @@ footer{
 }
 .footerContainer{
     width: 100%;
-    padding: 30px 30px 20px ;
+    padding: 30px 30px 30px ;
 }
 .socialIcons{
     display: flex;
@@ -393,7 +393,13 @@ footer{
 .socialIcons a i{
     font-size: 2em;
     color: black;
-    opacity: 0,9;
+    opacity: 0.9;
+    
+    
+}
+.socialIcons a:hover {
+    transform: scale(1.1); /* Adds a hover effect */
+    transition: 0.2s;
 }
 /* Hover affect on social media icon */
 .footerNav{
@@ -410,11 +416,12 @@ footer{
     text-decoration: none;
     font-size: 1.3em;
     opacity: 0.7;
-    transition: 0.5s;
+    transition: 0.2s;
 
 }
-.footerNav ul li a:hover{
+.footerNav ul li a:hover {
     opacity: 1;
+    color: #ff7800; /* Adds a hover color */
 }
 .footerBottom{
     background-color: #ff7800;
