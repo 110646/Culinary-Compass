@@ -126,8 +126,6 @@ footer{
     font-size: 2em;
     color: black;
     opacity: 0.9;
-    
-    
 }
 .socialIcons a:hover {
     transform: scale(1.1); /* Adds a hover effect */
