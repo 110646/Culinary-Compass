@@ -6,10 +6,8 @@
 }
 footer{
     background-color: #111;
-    width: 100vw;
     margin: 0px;
-    position: relative;
-    right: 200px;
+    
 }
 .footerContainer{
 
@@ -21,9 +19,7 @@ footer{
     display: flex;
     justify-content: center;
     background-color: #fff;
-    width: 100vw;
-    position: relative;
-    right: 200px;
+
 }
 .socialIcons a{
     text-decoration: none;
@@ -77,6 +73,13 @@ footer{
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
+}
+.footerbox{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 120%;
+    margin: auto;
 }
 
  
@@ -212,7 +215,7 @@ body{
 }
 .container{
     width: 80vw;
-    margin: 0 auto;
+    margin: 0px;
     text-align: center;
 }
 .lg-title,
@@ -288,6 +291,7 @@ body{
     opacity: 0;
     transition: opacity 0.6s ease;
 }
+
 .btn-cart, .btn-buy{
     background: transparent;
     border: 1px solid black;

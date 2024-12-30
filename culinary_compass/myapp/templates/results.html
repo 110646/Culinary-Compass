@@ -22,7 +22,7 @@
 
 </head>
 <body>
-    <div class="page">
+    <div class="background">
         <nav>
             <input type="checkbox" id="check" class="checkbox">
                 <label for="check" class="checkbtn">
@@ -96,6 +96,7 @@
         </div>
     </div>
 </body>
+<footer>
 <div class="footerbox">
     <div class="socialIcons">
         <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -119,16 +120,18 @@
         </div>
     </footer>
 </div>
-
+</footer>
 <style>
-    .page {
-        width: 100%;
-        min-height: 100vh;
+    .background {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 10px 8%;
         background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('{% static "images/ravioli.jpg" %}');
+    }
+    .container{
+        padding: 10px 8%;
+        width: 100%;
+        min-height: 100vh;
     }
     
 </style>
