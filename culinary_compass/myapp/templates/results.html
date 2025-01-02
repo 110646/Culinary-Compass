@@ -19,7 +19,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <div class="background">
@@ -50,77 +49,125 @@
                     </div>
                 </div> 
                 {% for item in results %}
-                <div class="product-items">
-                    <!-- single product -->
-                    <a href="{% url 'myapp:details' %}?recipe_id={{ item.id }}&query={{ query }}">
-                        <div class="product">
-                            <div class="product-content">
-                                <div class="product-img">
-                                    <img class="itemimg" src="{{ item.image }}" alt="product image">
-                                </div>
-                                <div class="product-btns">
-                                    <button type="button" class="btn-cart"> add to cart
-                                        <span><i class="fas fa-plus"></i></span>
-                                    </button>
-                                    <button type="button" class="btn-buy"> buy now
-                                        <span><i class="fas fa-shopping-cart"></i></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <div class="product-info-top">
-                                    <h2 class="sm-title">culinary compass</h2>
-                                    <div class="rating">
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="fas fa-star"></i></span>
-                                        <span><i class="far fa-star"></i></span>
+                    {% if loop.last %}
+                    <!-- Wrap the last item in its own div -->
+                    <div class="last-item-wrapper">
+                        <div class="product-items">
+                            <a href="{% url 'myapp:details' %}?recipe_id={{ item.id }}&query={{ query }}">
+                                <div class="product">
+                                    <div class="product-content">
+                                        <div class="product-img">
+                                            <img class="itemimg" src="{{ item.image }}" alt="product image">
+                                        </div>
+                                        <div class="product-btns">
+                                            <button type="button" class="btn-cart"> add to cart
+                                                <span><i class="fas fa-plus"></i></span>
+                                            </button>
+                                            <button type="button" class="btn-buy"> buy now
+                                                <span><i class="fas fa-shopping-cart"></i></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-info-top">
+                                            <h2 class="sm-title">culinary compass</h2>
+                                            <div class="rating">
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="far fa-star"></i></span>
+                                            </div>
+                                        </div>
+                                        {% if item.name %}
+                                            <a href="#" class="product-name">{{ item.name }}</a>
+                                        {% else %}
+                                            <a href="#" class="product-name">{{ item.title }}</a>
+                                        {% endif %}
+                                        <p class="product-price">{{ item.summary | striptags }}</p>
+                                    </div>
+                                    <div class="off-info">
+                                        <h2 class="sm-title">CULINARY COMPASS</h2>
                                     </div>
                                 </div>
-                                {% if item.name %}
-                                    <a href="#" class="product-name">{{ item.name }}</a>
-                                {% else %}
-                                    <a href="#" class="product-name">{{ item.title }}</a>
-                                {% endif %}
-                                <p class="product-price">{{ item.summary | striptags }}</p>
-                            </div>
-                            <div class="off-info">
-                                <h2 class="sm-title">CULINARY COMPASS</h2>
-                            </div>
+                            </a>
                         </div>
-                    </a>
+                    </div>
+                    {% else %}
+                    <!-- Regular product items with margin-bottom -->
+                    <div class="product-items">
+                        <a href="{% url 'myapp:details' %}?recipe_id={{ item.id }}&query={{ query }}">
+                            <div class="product">
+                                <div class="product-content">
+                                    <div class="product-img">
+                                        <img class="itemimg" src="{{ item.image }}" alt="product image">
+                                    </div>
+                                    <div class="product-btns">
+                                        <button type="button" class="btn-cart"> add to cart
+                                            <span><i class="fas fa-plus"></i></span>
+                                        </button>
+                                        <button type="button" class="btn-buy"> buy now
+                                            <span><i class="fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-info-top">
+                                        <h2 class="sm-title">culinary compass</h2>
+                                        <div class="rating">
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    {% if item.name %}
+                                        <a href="#" class="product-name">{{ item.name }}</a>
+                                    {% else %}
+                                        <a href="#" class="product-name">{{ item.title }}</a>
+                                    {% endif %}
+                                    <p class="product-price">{{ item.summary | striptags }}</p>
+                                </div>
+                                <div class="off-info">
+                                    <h2 class="sm-title">CULINARY COMPASS</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
                 {% endfor %}
-                </div>
             </div>
         </div>
     </div>
 </body>
 <footer>
-<div class="footerbox">
-    <div class="socialIcons">
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-twitter"></i></a>
-        <a href=""><i class="fa-brands fa-google-plus"></i></a>
-        <a href=""><i class="fa-brands fa-youtube"></i></a>
-    </div>
-    <footer>
-        <div class="footerContainer">
-            <div class="footerNav">
-                <ul><li><a href="/">Home</a></li>
-                    <li><a href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
-                    <li><a href="{% url 'myapp:about' %}">About</a></li>
-                    <li><a href="{% url 'myapp:top' %}">Top Picks</a></li>
-                </ul>
-            </div>   
+    <div class="footerbox">
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
         </div>
+        <footer>
+            <div class="footerContainer">
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{% url 'myapp:tip' %}">Kitchen Tips</a></li>
+                        <li><a href="{% url 'myapp:about' %}">About</a></li>
+                        <li><a href="{% url 'myapp:top' %}">Top Picks</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="footerBottom">
-            <p>Copyright &copy;2024;<span class="designer">DESIGNED BY YOGESH KARTHIKEYAN AND VISHAKH MISHRA</span></p>
-        </div>
-    </footer>
-</div>
+                <p>Copyright &copy;2024;<span class="designer">DESIGNED BY YOGESH KARTHIKEYAN AND VISHAKH MISHRA</span></p>
+            </div>
+        </footer>
+    </div>
 </footer>
+
 <style>
     .background {
         background-size: cover;
@@ -128,10 +175,25 @@
         background-position: center;
         background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('{% static "images/ravioli.jpg" %}');
     }
-    .container{
+    .container {
         padding: 10px 8%;
         width: 100%;
         min-height: 100vh;
     }
-    
+
+    /* Style for the last item wrapper */
+    .last-item-wrapper {
+        margin-bottom: 0; /* Remove bottom margin for the last item */
+    }
+
+    /* Regular product items */
+    .product-items {
+        margin-bottom: 20px; /* Add margin to all but the last item */
+    }
+
+    /* No margin for last product item */
+    .last-item-wrapper .product-items {
+        margin-bottom: 0;
+    }
 </style>
+</html>

@@ -10,7 +10,6 @@ footer{
     
 }
 .footerContainer{
-
     width: 100%;
     padding: 30px 30px 30px ;
 }
@@ -78,11 +77,8 @@ footer{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 120%;
+    width: 100%;
     margin: auto;
-    position: absolute;
-    left: -167px;
-    
     
 }
 
@@ -270,7 +266,7 @@ body{
     margin: 0.9rem auto;
 }
 .product{
-    margin: 2rem;
+    margin: 0px;
     position: relative;
     border-style: solid #ff7800;
 }
