@@ -80,6 +80,10 @@ footer{
     box-sizing: border-box;
     width: 120%;
     margin: auto;
+    position: absolute;
+    left: -167px;
+    
+    
 }
 
  
