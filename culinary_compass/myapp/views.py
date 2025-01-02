@@ -9,6 +9,10 @@ def home(request):
 
 def results(request):
     query = request.GET.get('query', '')
+
+    if len(query) > 14:
+        return redirect(f"/?message=The search exceeds the maximum characters allowed. Please try again.")
+
     url = f"https://api.spoonacular.com/recipes/complexSearch?query={query}&apiKey={settings.API_KEY}&addRecipeInformation=true"
     response = requests.get(url)
     if response.status_code == 200:
