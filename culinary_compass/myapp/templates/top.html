@@ -34,6 +34,58 @@
             <h1>Our Top Picks</h1>
             <p>Welcome to our Top Picks page, where we’ve curated a handpicked selection of our favorite recipes. From crowd-pleasers to hidden gems, these are the dishes we’re most excited to share with you. Explore the best of what our platform has to offer, all in one place!</p>
         </div>
+
+        <div class="but">
+            <button id="close-image">
+                <img src="{% static 'images/butter.jpg' %}" alt="Button">
+            </button>
+        </div>
+        <script>
+            // Get the button by its ID
+            document.getElementById('close-image').addEventListener('click', function() {
+                // Redirect to the desired URL
+                window.location.href = 'http://127.0.0.1:8000/details/?recipe_id=636488&query=butter%20chicken'; // Replace with your URL
+            });
+        </script>
+
+        <div class="french">
+            <button id="close-image1">
+                <img src="{% static 'images/french.png' %}" alt="Button">
+            </button>
+        </div>
+        <script>
+            // Get the button by its ID
+            document.getElementById('close-image1').addEventListener('click', function() {
+                // Redirect to the desired URL
+                window.location.href = 'http://127.0.0.1:8000/details/?recipe_id=673440&query=croissant'; // Replace with your URL
+            });
+        </script>
+
+        <div class="fish">
+            <button id="close-image2">
+                <img src="{% static 'images/kks.jpg' %}" alt="Button">
+            </button>
+        </div>
+        <script>
+            // Get the button by its ID
+            document.getElementById('close-image2').addEventListener('click', function() {
+                // Redirect to the desired URL
+                window.location.href = 'http://127.0.0.1:8000/details/?recipe_id=648974&query=fish%20tacos'; // Replace with your URL
+            });
+        </script>
+
+        <div class="mous">
+            <button id="close-image3">
+                <img src="{% static 'images/Moussaka.jpg' %}" alt="Button">
+            </button>
+        </div>
+        <script>
+            // Get the button by its ID
+            document.getElementById('close-image3').addEventListener('click', function() {
+                // Redirect to the desired URL
+                window.location.href = 'http://127.0.0.1:8000/details/?recipe_id=639606&query=moussaka'; // Replace with your URL
+            });
+        </script>
     </div>
 
 </body>
@@ -43,18 +95,6 @@
     <a href="https://www.youtube.com/@culinarycompass_us"><i class="fa-brands fa-youtube"></i></a>
     <a href="https://www.instagram.com/culinarycompass.us/"><i class="fa-brands fa-instagram"></i></a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9PxmgOlJKLoaEQSaEBjn31CpK9ph9t5uTsxxod4z2tHMhag/viewform?usp=header"><i class="fa-solid fa-envelope"></i></a>
-</div>
-<div class="but">
-    <img src="{% static 'images/butter.jpg' %}" />
-</div>
-<div class="french">
-    <img src="{% static 'images/french.png' %}" />
-</div>
-<div class="fish">
-    <img src="{% static 'images/kks.jpg' %}" />
-</div>
-<div class="mous">
-    <img src="{% static 'images/Moussaka.jpg' %}" />
 </div>
 <footer>
     <div class="footerContainer">
