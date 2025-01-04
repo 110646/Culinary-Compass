@@ -96,7 +96,7 @@ nav ul li a {
     
 }
 #close-image img:hover {
-    transform: scale(1.1); /* Slightly enlarge the image */
+    transform: scale(1.1);
 }
 .but .h1{
     font-family: "Encode Sans SC", serif;
@@ -135,7 +135,7 @@ nav ul li a {
     width: 271px;
 }
 #close-image1 img:hover {
-    transform: scale(1.1); /* Slightly enlarge the image */
+    transform: scale(1.1);
 }
 .french .h1{
     font-family: "Encode Sans SC", serif;
@@ -218,19 +218,19 @@ nav ul li a {
 
 .filterable_cards {
     display: flex;
-    flex-wrap: wrap; /* Allow the cards to wrap to the next line */
+    flex-wrap: wrap; 
     margin-top: 25px;
 }
 .card {
-    flex: 0 0 calc(18% - 20px); /* Set the width of each card */
-    margin: 0 10px 20px; /* Add margin around each card */
+    flex: 0 0 calc(18% - 20px); 
+    margin: 0 10px 20px; 
     padding: 3px;
     
 }
 .image {
     width: 100%;
-    height: 180px; /* Adjust the height as needed */
-    object-fit: cover; /* Crop the image to cover the specified dimensions */
+    height: 180px; 
+    object-fit: cover; 
     border-radius: 50%;
     zoom: 150%;
 }
@@ -264,10 +264,10 @@ footer{
     
 }
 .socialIcons a:hover {
-    transform: scale(1.1); /* Adds a hover effect */
+    transform: scale(1.1); 
     transition: 0.2s;
 }
-/* Hover affect on social media icon */
+
 .footerNav{
     margin: 30px 0;
 }
@@ -287,7 +287,7 @@ footer{
 }
 .footerNav ul li a:hover {
     opacity: 1;
-    color: #ff7800; /* Adds a hover color */
+    color: #ff7800; 
 }
 .footerBottom{
     background-color: #ff7800;
