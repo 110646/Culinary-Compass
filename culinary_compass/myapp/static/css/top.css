@@ -83,13 +83,37 @@ nav ul li a {
     margin: 0;
     vertical-align: top;
     width: 275px;
+    position: absolute;
+    left: 830px;
+    top: 300px
 }
 
 #close-image img {
     display: block;
+    transition: transform 0.3s ease;
     height: 337px;  
     width: 271px;
     
+}
+#close-image img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+}
+.but .h1{
+    font-family: "Encode Sans SC", serif;
+    font-size: 75px;
+    color: white;
+    position: absolute;
+    left: 1180px;
+    top: 280px
+}
+
+.but .s1{
+    font-size: 26px;
+    width:600px;
+    color: white;
+    position: absolute;
+    left: 1180px;
+    top: 380px
 }
 
 .french button {
@@ -99,12 +123,37 @@ nav ul li a {
     margin: 0;
     vertical-align: top;
     width: 275px;
+    position: absolute;
+    left: 1550px;
+    top: 680px
 }
 
 #close-image1 img {
     display: block;
+    transition: transform 0.3s ease;
     height: 262px;  
     width: 271px;
+}
+#close-image1 img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+}
+.french .h1{
+    font-family: "Encode Sans SC", serif;
+    width: 800px;
+    font-size: 49px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 772px;
+    top: 667px
+}
+.french .s1{
+    font-size: 19px;
+    width:720px;
+    color: white;
+    position: absolute;
+    left: 827px;
+    top: 807px
 }
 
 .kks button {
@@ -114,6 +163,7 @@ nav ul li a {
     margin: 0;
     vertical-align: top;
     width: 400px;
+    position: relative;
 }
 
 #close-image2 img {
@@ -129,6 +179,7 @@ nav ul li a {
     margin: 0;
     vertical-align: top;
     width: 400px;
+    position: relative;
 }
 
 #close-image3 img {
