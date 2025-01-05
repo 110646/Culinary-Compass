@@ -211,13 +211,13 @@ nav ul li a {
     top: 1037px
 }
 
-.kks button {
+.kk button {
     display: inline-block;
     position: absolute;
-    top: 900px; 
-    left: 1000px; 
-    height: 267px;
-    width: 400px;
+    top: 1200px;
+    left: 600px;
+    height: 250px;
+    width: 385px;
     padding: 0;
     margin: 0;
     vertical-align: top;
@@ -226,14 +226,34 @@ nav ul li a {
 
 #close-image2 img {
     display: block;
-    height: 263px;
-    width: 396px;
+    height: 246px;  
+    width: 381px;
     transition: transform 0.3s ease;
 }
 
-.kks button:hover {
+.kk button:hover {
     transform: scale(1.1);
 }
+
+.kk .h1{
+    font-family: "Encode Sans SC", serif;
+    width: 800px;
+    font-size: 49px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 1135px;
+    top: 965px
+}
+.kk .s1{
+    font-size: 21px;
+    width:585px;
+    color: white;
+    position: absolute;
+    left: 1262px;
+    top: 1037px
+}
+
 
 .btn{
     display: flex;
