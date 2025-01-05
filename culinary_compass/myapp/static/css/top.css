@@ -51,6 +51,7 @@ nav ul li a {
     color: #fff;
     max-width: 550px;
 }
+
 .content h1 {
     font-size: 50px;
     font-weight: 600;
@@ -76,27 +77,35 @@ nav ul li a {
     font-size: 16px;
     padding-left: 10px;
 }
+.content img{
+    height: 1000px;
+    width: 1000px;
+    opacity: 0;
+}
 .but button {
     display: inline-block;
     height: 341px;
+    width: 275px;
     padding: 0;
     margin: 0;
     vertical-align: top;
-    width: 275px;
     position: absolute;
     left: 830px;
-    top: 300px
+    top: 300px;
+    transition: transform 0.3s ease; /* Add transition to the button */
 }
 
+/* Image styling */
 #close-image img {
     display: block;
-    transition: transform 0.3s ease;
-    height: 337px;  
-    width: 271px;
-    
+    height: 100%; /* Ensure the image fills the button */
+    width: 100%;  /* Ensure the image fills the button */
+    transition: transform 0.3s ease; /* Smooth effect for the image */
 }
-#close-image img:hover {
-    transform: scale(1.1);
+
+/* Hover effect */
+.but button:hover {
+    transform: scale(1.1); /* Expand the button on hover */
 }
 .but .h1{
     font-family: "Encode Sans SC", serif;
@@ -119,24 +128,27 @@ nav ul li a {
 .french button {
     display: inline-block;
     height: 266px;
+    width: 275px;
     padding: 0;
     margin: 0;
     vertical-align: top;
-    width: 275px;
     position: absolute;
     left: 1550px;
-    top: 680px
+    top: 680px;
+    transition: transform 0.3s ease;
 }
 
 #close-image1 img {
     display: block;
+    height: 100%;
+    width: 100%;
     transition: transform 0.3s ease;
-    height: 262px;  
-    width: 271px;
 }
-#close-image1 img:hover {
+
+.french button:hover {
     transform: scale(1.1);
 }
+
 .french .h1{
     font-family: "Encode Sans SC", serif;
     width: 800px;
@@ -156,36 +168,71 @@ nav ul li a {
     top: 807px
 }
 
-.kks button {
-    display: inline-block;
-    height: 267px;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-    width: 400px;
-    position: relative;
-}
-
-#close-image2 img {
-    display: block;
-    height: 263px;  
-    width: 396px;
-}
-
 .mous button {
     display: inline-block;
-    height: 265px;
+    position: absolute;
+    top: 980px;
+    left: 830px;
+    height: 250px;
+    width: 385px;
     padding: 0;
     margin: 0;
     vertical-align: top;
-    width: 400px;
-    position: relative;
+    transition: transform 0.3s ease;
 }
 
 #close-image3 img {
     display: block;
-    height: 261px;  
+    height: 246px;  
+    width: 381px;
+    transition: transform 0.3s ease;
+}
+
+.mous button:hover {
+    transform: scale(1.1);
+}
+
+.mous .h1{
+    font-family: "Encode Sans SC", serif;
+    width: 800px;
+    font-size: 49px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 1135px;
+    top: 965px
+}
+.mous .s1{
+    font-size: 21px;
+    width:585px;
+    color: white;
+    position: absolute;
+    left: 1262px;
+    top: 1037px
+}
+
+.kks button {
+    display: inline-block;
+    position: absolute;
+    top: 900px; 
+    left: 1000px; 
+    height: 267px;
+    width: 400px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+}
+
+#close-image2 img {
+    display: block;
+    height: 263px;
     width: 396px;
+    transition: transform 0.3s ease;
+}
+
+.kks button:hover {
+    transform: scale(1.1);
 }
 
 .btn{

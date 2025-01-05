@@ -36,6 +36,7 @@
         <div class="content">
             <h1>Our Top Picks</h1>
             <p>Welcome to our Top Picks page, where we’ve curated a handpicked selection of our favorite recipes. From crowd-pleasers to hidden gems, these are the dishes we’re most excited to share with you. Explore the best of what our platform has to offer, all in one place!</p>
+            <img src="{% static 'images/trans.jpeg' %}" alt="transparent">
         </div>
 
         <div class="but">
@@ -64,6 +65,19 @@
             });
         </script>
 
+        <div class="mous">
+            <h class="h1">Classic Greek Moussaka</h>
+            <p class="s1">Classic Greek Moussaka is a savory casserole made with layers of tender eggplant, spiced ground meat, and a creamy béchamel sauce, all baked to golden perfection. This traditional dish offers a rich combination of flavors and textures, making it a beloved comfort food in Greek cuisine.</p>
+            <button id="close-image3">
+                <img src="{% static 'images/Moussaka.jpg' %}" alt="Button">
+            </button>
+        </div>
+        <script>
+            document.getElementById('close-image3').addEventListener('click', function() {
+                window.location.href = 'http://127.0.0.1:8000/details/?recipe_id=639606&query=moussaka';
+            });
+        </script>
+
         <div class="fish">
             <button id="close-image2">
                 <img src="{% static 'images/kks.jpg' %}" alt="Button">
@@ -72,17 +86,6 @@
         <script>
             document.getElementById('close-image2').addEventListener('click', function() {
                 window.location.href = 'http://127.0.0.1:8000/details/?recipe_id=648974&query=fish%20tacos';
-            });
-        </script>
-
-        <div class="mous">
-            <button id="close-image3">
-                <img src="{% static 'images/Moussaka.jpg' %}" alt="Button">
-            </button>
-        </div>
-        <script>
-            document.getElementById('close-image3').addEventListener('click', function() {
-                window.location.href = 'http://127.0.0.1:8000/details/?recipe_id=639606&query=moussaka';
             });
         </script>
     </div>
