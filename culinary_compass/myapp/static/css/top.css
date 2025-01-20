@@ -78,7 +78,7 @@ nav ul li a {
     padding-left: 10px;
 }
 .content img{
-    height: 1000px;
+    height: 760px;
     width: 1000px;
     opacity: 0;
 }
@@ -218,6 +218,7 @@ nav ul li a {
     left: 152px;
     height: 204px;
     width: 324px;
+    display: none;
     padding: 0;
     margin: 0;
     vertical-align: top;
@@ -243,6 +244,7 @@ nav ul li a {
     position: absolute;
     left: -102px;
     font-weight: bold;
+    display: none;
     top: 910px
 }
 .kk .s1{
@@ -250,9 +252,9 @@ nav ul li a {
     width:485px;
     color: white;
     position: absolute;
+    display: none;
     left: 152px;
     top: 974px
-    
 }
 
 
