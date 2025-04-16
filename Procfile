@@ -1,1 +1,1 @@
-web gunicorn CCMS.wsgi --log-file--
+web gunicorn culinary_compass.wsgi:application --log-file -
